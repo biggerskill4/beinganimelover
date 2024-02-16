@@ -12,7 +12,7 @@
 	<atom:link href="/feed/" rel="self" type="application/rss+xml" />
 	<link>/</link>
 	<description></description>
-	<lastBuildDate>Mon, 12 Feb 2024 12:22:56 +0000</lastBuildDate>
+	<lastBuildDate>Fri, 16 Feb 2024 12:01:22 +0000</lastBuildDate>
 	<language>en-US</language>
 	<sy:updatePeriod>
 	hourly	</sy:updatePeriod>
@@ -28,6 +28,36 @@
 	<height>32</height>
 </image> 
 	<item>
+		<title>Attack on Titan</title>
+		<link>/attack-on-titan/</link>
+					<comments>/attack-on-titan/#respond</comments>
+		
+		<dc:creator><![CDATA[admin]]></dc:creator>
+		<pubDate>Fri, 16 Feb 2024 12:01:20 +0000</pubDate>
+				<category><![CDATA[Uncategorized]]></category>
+		<guid isPermaLink="false">/?p=455</guid>
+
+					<description><![CDATA[<p>The post <a href="/attack-on-titan/">Attack on Titan</a> appeared first on <a href="">Beinganimelover</a>.</p>
+]]></description>
+										<content:encoded><![CDATA[
+<figure class="wp-block-image size-full"><img fetchpriority="high" decoding="async" width="1920" height="1080" src="/wp-content/uploads/2024/02/2306a-17011492650650-1920.jpg" alt="" class="wp-image-102"/></figure>
+
+
+
+<figure class="wp-block-image size-full"><img decoding="async" width="2030" height="1440" src="/wp-content/uploads/2024/02/067a823ff557fb4610737529647dba8b.jpeg" alt="" class="wp-image-117"/></figure>
+
+
+
+<figure class="wp-block-image size-full"><img decoding="async" width="1920" height="1080" src="/wp-content/uploads/2024/02/9064962.jpg" alt="" class="wp-image-113"/></figure>
+<p>The post <a href="/attack-on-titan/">Attack on Titan</a> appeared first on <a href="">Beinganimelover</a>.</p>
+]]></content:encoded>
+					
+					<wfw:commentRss>/attack-on-titan/feed/</wfw:commentRss>
+			<slash:comments>0</slash:comments>
+		
+		
+			</item>
+		<item>
 		<title>One Piece</title>
 		<link>/one-piece/</link>
 					<comments>/one-piece/#respond</comments>
