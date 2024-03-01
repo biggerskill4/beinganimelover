@@ -30,7 +30,7 @@
 	<item>
 		<title>Attack on Titan</title>
 		<link>/attack-on-titan/</link>
-					<comments>/attack-on-titan/#respond</comments>
+					<comments>/attack-on-titan/#comments</comments>
 		
 		<dc:creator><![CDATA[admin]]></dc:creator>
 		<pubDate>Fri, 16 Feb 2024 12:01:20 +0000</pubDate>
@@ -53,14 +53,14 @@
 ]]></content:encoded>
 					
 					<wfw:commentRss>/attack-on-titan/feed/</wfw:commentRss>
-			<slash:comments>0</slash:comments>
+			<slash:comments>1</slash:comments>
 		
 		
 			</item>
 		<item>
 		<title>One Piece</title>
 		<link>/one-piece/</link>
-					<comments>/one-piece/#respond</comments>
+					<comments>/one-piece/#comments</comments>
 		
 		<dc:creator><![CDATA[admin]]></dc:creator>
 		<pubDate>Mon, 12 Feb 2024 12:21:43 +0000</pubDate>
@@ -83,7 +83,7 @@
 ]]></content:encoded>
 					
 					<wfw:commentRss>/one-piece/feed/</wfw:commentRss>
-			<slash:comments>0</slash:comments>
+			<slash:comments>1</slash:comments>
 		
 		
 			</item>

@@ -11,11 +11,39 @@
 	<atom:link href="/comments/feed/" rel="self" type="application/rss+xml" />
 	<link>/</link>
 	<description></description>
-	<lastBuildDate>Fri, 16 Feb 2024 12:23:57 +0000</lastBuildDate>
+	<lastBuildDate>Fri, 16 Feb 2024 12:33:56 +0000</lastBuildDate>
 	<sy:updatePeriod>
 	hourly	</sy:updatePeriod>
 	<sy:updateFrequency>
 	1	</sy:updateFrequency>
 	<generator>https://wordpress.org/?v=6.4.3</generator>
-</channel>
+	<item>
+		<title>
+		Comment on One Piece by Oscar Stanley		</title>
+		<link>/one-piece/#comment-3</link>
+
+		<dc:creator><![CDATA[Oscar Stanley]]></dc:creator>
+		<pubDate>Fri, 16 Feb 2024 12:33:56 +0000</pubDate>
+		<guid isPermaLink="false">/?p=123#comment-3</guid>
+
+					<description><![CDATA[Nulla placeat volup]]></description>
+			<content:encoded><![CDATA[<p>Nulla placeat volup</p>
+]]></content:encoded>
+		
+			</item>
+		<item>
+		<title>
+		Comment on Attack on Titan by Henry Mcbride		</title>
+		<link>/attack-on-titan/#comment-2</link>
+
+		<dc:creator><![CDATA[Henry Mcbride]]></dc:creator>
+		<pubDate>Fri, 16 Feb 2024 12:32:50 +0000</pubDate>
+		<guid isPermaLink="false">/?p=455#comment-2</guid>
+
+					<description><![CDATA[Fugiat consectetur p]]></description>
+			<content:encoded><![CDATA[<p>Fugiat consectetur p</p>
+]]></content:encoded>
+		
+			</item>
+	</channel>
 </rss>
