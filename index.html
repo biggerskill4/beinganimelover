@@ -1,22 +1,58 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Beinganimelover</title>
 
+    <!-- favicon -->
+    <link rel="shortcut icon" href="./Images/favicon.png" type="image/x-icon">
+
     <!-- css -->
     <link rel="stylesheet" href="./assets/css/style.css">
 
+    <!-- icons -->
+    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+
 </head>
+
 <body>
-    <h1>Hello World</h1>
-    <h2>Hello World</h2>
-    <h3>Hello World</h3>
-    <h4>Hello World</h4>
-    <h5>Hello World</h5>
-    <h6>Hello World</h6>
-    <p>Hello World</p>
-    <a href="#" class="cta-btn">Hello World</a>
+    <!-- header -->
+    <header>
+        <!-- Top Bar -->
+        <div class="header__top-bar">
+            <div class="header__top-bar-left">
+                <a href="#">Terms & Conditions</a>
+                <a href="#">Privacy Policy</a>
+            </div>
+            <div class="header__top-bar-right">
+                <p>Follow us:</p>
+                <a href="#" class="header__social-link"><ion-icon name="logo-youtube"></ion-icon></a>
+                <a href="#" class="header__social-link"><ion-icon name="logo-instagram"></ion-icon></a>
+                <a href="#" class="header__social-link"><ion-icon name="logo-facebook"></ion-icon></a>
+            </div>
+        </div>
+
+        <!-- Main Navigation -->
+        <div class="header__main">
+            <div class="row">
+                <div class="header__logo"><a href="index.html"><img src="./Images/LOGO.png" alt="Site Logo"></a></div>
+                <nav class="header__nav">
+                    <ul>
+                        <li class="header__menu-item"><a href="#">Home</a></li>
+                        <li class="header__menu-item"><a href="#">Anime Lists <ion-icon name="add-outline"></ion-icon></a></li>
+                        <li class="header__menu-item"><a href="#">Blogs/Articles <ion-icon name="add-outline"></ion-icon></a></li>
+                        <li class="header__menu-item"><a href="#">Gallery</a></li>
+                        <li class="header__menu-item"><a href="#">About Us</a></li>
+                    </ul>
+                </nav>
+                <a href="#" class="cta-btn">Support Us</a>
+            </div>
+        </div>
+    </header>
+    <!-- End header -->
 </body>
+
 </html>
