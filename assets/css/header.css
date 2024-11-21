@@ -77,7 +77,7 @@ nav.header__nav ul li a ion-icon.md.hydrated {
 
 nav.header__nav .mobile-nav {
     display: none;
-    font-size: 35px;
+    font-size: 26px;
     padding: 8px 0 0;
 }
 nav.header__nav .mobile-nav ion-icon.md.hydrated {
@@ -118,5 +118,18 @@ nav.header__nav .mobile-nav ion-icon.md.hydrated {
     }
     .header__top-bar-left {
         display: none;
+    }
+    .header__main {
+        height: auto;
+        padding: 10px 20px;
+    }
+    .header__logo {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    .header__logo img {
+        padding: 5px 0 0;
+        width: 100px;
     }
 }
