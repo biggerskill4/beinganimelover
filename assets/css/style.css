@@ -1,0 +1,151 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+:root {
+    --primary-color: #08090C;
+    --secondary-color: #F56565;
+    --theme-color-1: #161923;
+    --text-color: #ffffff;
+    --accent-color: #F56565;
+    --accent-hover: #ffffff;
+}
+
+body {
+    background: var(--primary-color);
+    color: var(--text-color);
+}
+
+/* headings */
+h1 {
+    font-size: 60px;
+    font-weight: 600;
+}
+
+h2 {
+    font-size: 50px;
+    font-weight: 600;
+}
+
+h3 {
+    font-size: 40px;
+    font-weight: 600;
+}
+
+h4 {
+    font-size: 35px;
+    font-weight: 600;
+}
+
+h5 {
+    font-size: 30px;
+    font-weight: 600;
+}
+
+h6 {
+    font-size: 26px;
+    font-weight: 600;
+}
+
+p {
+    font-weight: 16px;
+    font-weight: 400;
+}
+
+/* anchor */
+a {
+    text-decoration: none;
+    color: var(--text-color);
+    font-weight: 16px;
+    transition: 0.3s;
+}
+
+a:hover {
+    color: var(--secondary-color);
+}
+
+/* button */
+.cta-btn {
+    padding: 15px 30px;
+    border-radius: 50px;
+}
+
+.cta-btn:hover {
+    background-position: 100%;
+    color: #c266d3;
+}
+
+@media(max-width: 1200px) {}
+
+@media(max-width: 1024px) {
+    h1 {
+        font-size: 50px;
+        font-weight: 600;
+    }
+
+    h2 {
+        font-size: 40px;
+        font-weight: 600;
+    }
+
+    h3 {
+        font-size: 35px;
+        font-weight: 600;
+    }
+
+    h4 {
+        font-size: 30px;
+        font-weight: 600;
+    }
+
+    h5 {
+        font-size: 28px;
+        font-weight: 600;
+    }
+}
+
+@media(max-width: 992px) {}
+
+@media(max-width: 768px) {}
+
+@media(max-width: 576px) {
+    h1 {
+        font-size: 35px;
+        font-weight: 600;
+    }
+
+    h2 {
+        font-size: 30px;
+        font-weight: 600;
+    }
+
+    h3 {
+        font-size: 26px;
+        font-weight: 600;
+    }
+
+    h4 {
+        font-size: 24px;
+        font-weight: 600;
+    }
+
+    h5 {
+        font-size: 20px;
+        font-weight: 600;
+    }
+
+    h6 {
+        font-size: 20px;
+        font-weight: 600;
+    }
+}
+
+@media(max-width: 480px) {}
+
+@media(max-width: 380px) {}
