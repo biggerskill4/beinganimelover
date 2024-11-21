@@ -1,0 +1,43 @@
+.banner {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 600px;
+    background: url(../../Images/bg.png);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    position: relative;
+    z-index: 0;
+}
+.banner::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: #08090C;
+    opacity: 0.8;
+    z-index: -1;
+}
+.banner .banner__content {
+    width: 1600px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+.banner__content .banner__title {
+    line-height: 70px;
+    width: 60%;
+}
+.banner__content .banner__title .highlight {
+    color: var(--secondary-color);
+}
+.banner__content .banner__subtitle {
+    width: 40%;
+}
+.banner__content .cta-btn {
+    width: 210px;
+}
