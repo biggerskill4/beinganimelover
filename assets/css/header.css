@@ -1,0 +1,32 @@
+header {
+    width: 100%;
+    padding: 10px;
+    border-bottom: 1px solid #303030;
+}
+
+header .row {
+    width: 1440px;
+    justify-content: space-between;
+}
+
+header .site-logo {
+    font-size: 20px;
+}
+
+header .navbar {
+    display: flex;
+}
+header .navbar ul {
+    gap: 30px;
+}
+header .navbar ul li {
+    list-style-type: none;
+}
+
+header .navbar ul li a {
+    color: #e6e6e6;
+}
+
+header .navbar ul li a:hover {
+    color: var(--primary-color)
+}

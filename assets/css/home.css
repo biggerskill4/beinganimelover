@@ -1,0 +1,50 @@
+.banner {
+    height: 500px;
+    width: 100%;
+    background-image: url(../images/img/bg.webp);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    position: relative;
+    z-index: 0;
+    animation: zoomInOut 10s ease-in-out infinite;
+}
+
+/* Keyframes for zooming */
+@keyframes zoomInOut {
+  0%, 100% {
+    background-size: 100%;
+  }
+  50% {
+    background-size: 110%;
+  }
+}
+
+.banner::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: #000000;
+    opacity: 0.8;
+    z-index: -1;
+}
+
+.banner .row {
+    flex-direction: column;
+    width: 1440px;
+    gap: 20px;
+}
+
+.banner h1 {
+    font-size: 60px;
+    line-height: 70px;
+    text-align: center;
+}
+
+.banner p {
+    text-align: center;
+    width: 50%;
+}
