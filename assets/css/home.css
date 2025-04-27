@@ -74,7 +74,7 @@
 
 .most_viewed .cards .swiper-slide {
   background-color: #1b1b1b;
-  border-radius: 20px;
+  border-radius: 10px;
   overflow: hidden;
   padding: 0;
   margin: 0;
@@ -166,17 +166,23 @@
   }
 
   .most_viewed {
-    padding: 30px 10px;
+    padding: 30px 15px;
   }
 
   .most_viewed h2 {
     font-size: 24px;
     line-height: 30px;
   }
-  .most_viewed .cards .cardDetails img {
-    height: 250px;
+
+  .most_viewed .cards .mySwiper {
+    padding-bottom: 20px;
   }
+
+  .most_viewed .cards .cardDetails img {
+    height: 200px;
+  }
+
   .most_viewed .cards .cardDetails .title {
-    font-size: 16px;
+    font-size: 14px;
   }
 }
