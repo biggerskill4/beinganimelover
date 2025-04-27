@@ -8,6 +8,8 @@
     <link rel="shortcut icon" href="./assets/images/img/favicon.webp" type="image/x-icon">
     <!-- css -->
     <link rel="stylesheet" href="./assets/css/style.css">
+    <!-- Link Swiper's CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
 </head>
 
 <body>
@@ -31,15 +33,130 @@
     <!-- end header -->
 
     <!-- hero -->
-     <section class="banner flex">
+    <section class="banner flex">
         <div class="row flex">
             <h1>BeingAnimeLover<br>Dive into Manga & Manhwa</h1>
-            <p>Explore the vibrant worlds of manga and manhwa with BeingAnimeLover — your gateway to epic stories, stunning art, and unforgettable adventures.</p>
+            <p>Explore the vibrant worlds of manga and manhwa with BeingAnimeLover — your gateway to epic stories,
+                stunning art, and unforgettable adventures.</p>
         </div>
-     </section>
+    </section>
     <!-- end hero -->
 
+    <!-- manga + manhwa -->
+    <section class="most_viewed flex">
+        <div class="row flex">
+            <h2>Most Viewed</h2>
+            <div class="cards">
+                <!-- Swiper -->
+                <div class="swiper mySwiper">
+                    <div class="swiper-wrapper">
+                        <div class="swiper-slide cardDetails">
+                            <a href="#">
+                                <img src="./assets/images/manga/one-piece/one-piece.webp" alt="One Piece Thumbnail">
+                                <div class="title">One Piece One Piece One PieceOne Piece</div>
+                            </a>
+                        </div>
+                        <div class="swiper-slide cardDetails">
+                            <a href="#">
+                                <img src="./assets/images/manga/blue-lock.webp" alt="One Piece Thumbnail">
+                                <div class="title">One Piece</div>
+                            </a>
+                        </div>
+                        <div class="swiper-slide cardDetails">
+                            <a href="#">
+                                <img src="./assets/images/manga/dandadan.webp" alt="One Piece Thumbnail">
+                                <div class="title">One Piece</div>
+                            </a>
+                        </div>
+                        <div class="swiper-slide cardDetails">
+                            <a href="#">
+                                <img src="./assets/images/manga/fragment-flower.webp" alt="One Piece Thumbnail">
+                                <div class="title">One Piece</div>
+                            </a>
+                        </div>
+                        <div class="swiper-slide cardDetails">
+                            <a href="#">
+                                <img src="./assets/images/manga/img.webp" alt="One Piece Thumbnail">
+                                <div class="title">One Piece</div>
+                            </a>
+                        </div>
+                        <div class="swiper-slide cardDetails">
+                            <a href="#">
+                                <img src="./assets/images/manga/monster-8.webp" alt="One Piece Thumbnail">
+                                <div class="title">One Piece</div>
+                            </a>
+                        </div>
+                        <div class="swiper-slide cardDetails">
+                            <a href="#">
+                                <img src="./assets/images/manga/one-piece/one-piece.webp" alt="One Piece Thumbnail">
+                                <div class="title">One Piece</div>
+                            </a>
+                        </div>
+                        <div class="swiper-slide cardDetails">
+                            <a href="#">
+                                <img src="./assets/images/manga/one-piece/one-piece.webp" alt="One Piece Thumbnail">
+                                <div class="title">One Piece</div>
+                            </a>
+                        </div>
+                        <div class="swiper-slide cardDetails">
+                            <a href="#">
+                                <img src="./assets/images/manga/one-piece/one-piece.webp" alt="One Piece Thumbnail">
+                                <div class="title">One Piece</div>
+                            </a>
+                        </div>
+                        <div class="swiper-slide cardDetails">
+                            <a href="#">
+                                <img src="./assets/images/manga/one-piece/one-piece.webp" alt="One Piece Thumbnail">
+                                <div class="title">One Piece</div>
+                            </a>
+                        </div>
+                    </div>
+                    <!-- Scrollbar -->
+                    <div class="swiper-scrollbar"></div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- End manga + manhwa -->
+
     <script src="./assets/js/script.js"></script>
+
+    <!-- Swiper JS -->
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+
+    <!-- Initialize Swiper -->
+    <script>
+        var swiper = new Swiper(".mySwiper", {
+            slidesPerView: 6,
+            spaceBetween: 10,
+            scrollbar: {
+                el: ".swiper-scrollbar",
+                draggable: true, // isse user drag bhi kar sakta hai
+            },
+            breakpoints: {
+                100: {
+                    slidesPerView: 2,
+                    spaceBetween: 10,
+                },
+                480: {
+                    slidesPerView: 3,
+                    spaceBetween: 10,
+                },
+                768: {
+                    slidesPerView: 4,
+                    spaceBetween: 10,
+                },
+                1024: {
+                    slidesPerView: 4,
+                    spaceBetween: 10,
+                },
+                1440: {
+                    slidesPerView: 6,
+                    spaceBetween: 10,
+                },
+            },
+        });
+    </script>
 </body>
 
 </html>

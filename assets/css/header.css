@@ -30,3 +30,16 @@ header .navbar ul li a {
 header .navbar ul li a:hover {
     color: var(--primary-color)
 }
+
+
+@media (max-width: 1440px) {
+    header .row {
+        width: 100%;
+    }
+}
+
+@media (max-width: 768px) {
+    header .navbar {
+        display: none;
+    }
+}

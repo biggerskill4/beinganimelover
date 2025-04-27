@@ -69,12 +69,12 @@ h6 {
 }
 
 h2 {
-    font-size: 60px;
-    line-height: 70px;
+    font-size: 40px;
+    line-height: 50px;
 }
 
 p {
-    font-weight: 18px;
+    font-size: 18px;
 }
 
 a {
@@ -101,18 +101,6 @@ a:hover {
     transform: translateY(-5px);
 }
 
-.custom-cursor {
-    position: fixed;
-    width: 30px;
-    height: 30px;
-    background: var(--accent-color);
-    border-radius: 50%;
-    pointer-events: none;
-    mix-blend-mode: difference;
-    transform: translate(-50%, -50%);
-    transition: transform 0.1s ease-out;
-    z-index: 99999999;
-}
 
 #preloader {
     position: fixed;
@@ -158,13 +146,6 @@ a:hover {
 
     100% {
         transform: rotate(360deg);
-    }
-}
-
-
-@media(max-width: 768px) {
-    .custom-cursor {
-        display: none;
     }
 }
 
