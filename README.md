@@ -1,6 +1,6 @@
-# BeingAnimeLover
+# Beinganimelover
 
-**BeingAnimeLover** is a modern anime-focused web platform showcasing YouTube Shorts, cinematic anime edits, and detailed anime character profiles.
+**Beinganimelover** is a modern anime-focused web platform showcasing YouTube Shorts, cinematic anime edits, and detailed anime character profiles.
 
 The website serves as an anime discovery hub where fans can explore curated short-form video content alongside dedicated character detail pages. Each character is presented on a structured single page designed like a blog, highlighting personality, background, visuals, and key information.
 
@@ -21,7 +21,7 @@ This platform blends anime entertainment, character exploration, and visual stor
 
 ## 🎯 Purpose
 
-BeingAnimeLover is designed for:
+Beinganimelover is designed for:
 
 - Anime fans
 - Anime editors
@@ -41,7 +41,7 @@ BeingAnimeLover is designed for:
 
 ## 🌐 Live Website
 
-[Visit BeingAnimeLover](https://biggerskill4.github.io/beinganimelover/)
+[Visit Beinganimelover](https://biggerskill4.github.io/beinganimelover/)
 
 ---
 
