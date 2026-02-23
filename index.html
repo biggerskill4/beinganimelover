@@ -1,15 +1,95 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>beinganimelover</title>
+    <!-- favicon -->
+    <link rel="shortcut icon" href="./assets/images/favicon.webp" type="image/x-icon">
+
+    <!-- ionicon -->
+    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+
+    <!-- lenis -->
+    <script src="https://unpkg.com/lenis@1.3.17/dist/lenis.min.js"></script>
     <!-- css -->
     <link rel="stylesheet" href="./assets/css/style.css">
+    <link rel="stylesheet" href="./assets/css/home.css">
 </head>
+
 <body>
-    <h1>Coming Soon</h1>
+
+    <!-- header -->
+    <header class="flex">
+        <div class="container flex">
+            <div class="site-logo flex">
+                <a href="./index.html">
+                    <img src="./assets/images/logo.svg" alt="Logo">
+                </a>
+            </div>
+            <div class="menu flex">
+                <ul class="flex">
+                    <li><a href="#" class="active flex-col"><span class="menu-text">Home</span></a></li>
+                    <li><a href="#" class="flex-col"><span class="menu-text">Anime</span></a></li>
+                    <li><a href="#" class="flex-col"><span class="menu-text">Categories</span></a></li>
+                    <li><a href="#" class="flex-col"><span class="menu-text">Videos</span></a></li>
+                    <li><a href="#" class="flex-col"><span class="menu-text">About</span></a></li>
+                </ul>
+            </div>
+            <div class="header-btn flex">
+                <a href="#" class="cta flex">
+                    <span class="cta-text flex">Subscribe</span> <span class="flex"><ion-icon
+                            name="logo-youtube"></ion-icon></span>
+                </a>
+            </div>
+        </div>
+    </header>
+    <!-- End Header -->
+
+    <!-- Hero -->
+    <section class="hero flex">
+        <!-- hero bg -->
+        <img src="./assets/images/slides/2b/2b-bg-slide.webp" alt="Background" class="hero-bg-img">
+        <div class="container flex-col">
+
+            <!-- hero bg name -->
+            <h2 class="hero-title">NieR: Automata</h2>
+
+            <!-- hero character img -->
+            <img src="./assets/images/slides/2b/2b_slide.webp" alt="Character" class="character">
+
+            <!-- hero cards -->
+            <div class="hero-cards">
+                <div class="card">
+                    <h3>Yorha No.2 Type B</h3>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Natus perferendis voluptates beatae quos
+                        sapiente, quaerat laudantium fugiat ipsa totam nihil.</p>
+                </div>
+                <div class="card">
+                    <h3>Yorha No.2 Type B</h3>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Natus perferendis voluptates beatae quos
+                        sapiente, quaerat laudantium fugiat ipsa totam nihil.</p>
+                </div>
+                <div class="card">
+                    <h3>Yorha No.2 Type B</h3>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Natus perferendis voluptates beatae quos
+                        sapiente, quaerat laudantium fugiat ipsa totam nihil.</p>
+                </div>
+                <div class="card">
+                    <h3>Yorha No.2 Type B</h3>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Natus perferendis voluptates beatae quos
+                        sapiente, quaerat laudantium fugiat ipsa totam nihil.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- End Hero -->
+
+
     <!-- js -->
     <script src="script.js"></script>
 </body>
+
 </html>
