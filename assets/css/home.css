@@ -1,0 +1,88 @@
+.hero {
+    width: 100%;
+    padding: 80px 15px;
+    height: 100vh;
+    position: relative;
+}
+
+.hero::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: #14141469;
+    backdrop-filter: blur(5px);
+    z-index: 0;
+}
+
+.hero img.hero-bg-img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    object-position: bottom center;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    z-index: -1;
+}
+
+.hero .container {
+    width: var(--max-width);
+}
+
+.hero .hero-title {
+    font-size: 200px;
+    line-height: 0.9;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    z-index: 0;
+    width: 100%;
+    color: transparent;
+    background: linear-gradient(180deg, #FFFFFF 60%, #363636);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.hero img.character {
+    position: absolute;
+    bottom: 0;
+    height: 90%;
+    object-fit: contain;
+    z-index: 1;
+}
+
+.hero .hero-cards {
+    width: var(--max-width);
+    position: absolute;
+    bottom: 50px;
+    z-index: 10;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
+}
+
+.hero .hero-cards .card {
+    padding: 30px;
+    background: var(--card-bg);
+    backdrop-filter: blur(5px);
+    border-radius: 30px;
+    border: 1px solid #ffffff14;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.hero .hero-cards .card h3 {
+    font-size: 30px;
+    letter-spacing: 2px;
+}
+
+.hero .hero-cards .card p {
+    font-weight: 300;
+    font-size: 16px;
+}
