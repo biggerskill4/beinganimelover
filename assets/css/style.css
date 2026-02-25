@@ -43,11 +43,42 @@ a {
     transition: all 0.3s ease;
 }
 
+/* Cursor */
+.custom-cursor {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 30px;
+    height: 30px;
+    border: 1px solid var(--white-color);
+    border-radius: 50%;
+    pointer-events: none;
+    transform: translate(-50%, -50%);
+    z-index: 9999;
+}
+
+.custom-cursor-circle {
+    position: fixed;
+    top: 0;
+    left: 0;
+    background: var(--primary-color);
+    pointer-events: none;
+    transform: translate(-50%, -50%);
+    width: 10px;
+    height: 10px;
+    border-radius: 100px;
+    z-index: 9999;
+    mix-blend-mode: difference;
+}
+
+/* Cursor End */
+
 .cta {
     background: var(--accent-color);
     color: var(--text-color);
     font-size: 18px;
     font-weight: 500;
+    border-radius: 50px;
     padding: 12px 20px 12px 20px;
     gap: 15px;
     position: relative;
@@ -63,7 +94,8 @@ a {
     position: absolute;
     top: 0;
     right: 0;
-    width: 4px;
+    width: 0;
+    border-radius: 50px;
     height: 100%;
     transition: all 0.3s;
     background: var(--accent-hover);
@@ -72,7 +104,6 @@ a {
 
 .cta:hover::before {
     width: 100%;
-    border-left: 4px solid var(--white-color);
 }
 
 .cta span.rotate {
@@ -139,6 +170,29 @@ header .header-btn {
     justify-content: flex-end;
 }
 
+/* Under Construction */
+.under-construction {
+    width: 100%;
+    padding: 80px 15px;
+}
+.under-construction .container {
+    width: var(--max-width);
+    justify-content: center;
+    align-items: center;
+    gap: 50px;
+    background: var(--primary-color);
+    padding: 30px;
+    border-radius: 50px;
+}
+
+.under-construction h2 {
+    font-size: 50px;
+    text-align: center;
+}
+
+.under-construction img {
+    width: 300px;
+}
 
 /* globall */
 @media(max-width:1600px) {
