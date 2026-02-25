@@ -8,11 +8,11 @@
 
 :root {
     --primary-color: #F89DA2;
-    --secondary-color: #323232;
+    --secondary-color: #252525;
     --text-color: #FFFFFF;
-    --accent-color: #323232;
+    --accent-color: #252525;
     --accent-hover: #FFFFFF; 
-    --bg-color: #141414;
+    --bg-color: #0a0a0a;
     --white-color: #FFFFFF;
     --black-color: #000000;
     --card-bg: #ffffff14;
@@ -123,53 +123,6 @@ a {
     flex-direction: column;
 }
 
-/* header */
-header {
-    width: 100%;
-    padding: 15px;
-    position: absolute;
-    top: 0;
-    left: 0;
-    z-index: 999;
-}
-
-header .container {
-    width: var(--max-width);
-}
-
-header .site-logo {
-    width: 25%;
-    justify-content: flex-start;
-}
-
-header .site-logo img {
-    width: 200px;
-}
-
-header .menu {
-    width: 50%;
-    justify-content: center;
-}
-
-header .menu ul {
-    list-style: none;
-    gap: 40px;
-    padding: 14px 35px;
-    border-radius: 50px;
-    background: var(--secondary-color);
-}
-
-header .menu ul li a {
-    font-size: 17px;
-    font-weight: 300;
-    justify-content: flex-start;
-}
-
-header .header-btn {
-    width: 25%;
-    justify-content: flex-end;
-}
-
 /* Under Construction */
 .under-construction {
     width: 100%;
@@ -180,7 +133,8 @@ header .header-btn {
     justify-content: center;
     align-items: center;
     gap: 50px;
-    background: var(--primary-color);
+    background: var(--white-color);
+    color: var(--bg-color);
     padding: 30px;
     border-radius: 50px;
 }

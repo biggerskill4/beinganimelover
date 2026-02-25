@@ -1,8 +1,76 @@
+/* ====================
+ Header 
+==================== */
+header {
+    width: 100%;
+    padding: 15px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 999;
+}
+
+header .container {
+    width: var(--max-width);
+}
+
+header .site-logo {
+    width: 25%;
+    justify-content: flex-start;
+}
+
+header .site-logo img {
+    width: 200px;
+}
+
+header .menu {
+    width: 50%;
+    justify-content: center;
+}
+
+header .menu ul {
+    list-style: none;
+    gap: 40px;
+    padding: 14px 35px;
+    border-radius: 50px;
+    background: var(--secondary-color);
+}
+
+header .menu ul li a {
+    font-size: 17px;
+    font-weight: 300;
+    justify-content: flex-start;
+    overflow: hidden;
+    height: 25px;
+}
+header ul li a span.menu-text {
+    display: flex;
+    flex-direction: column;
+    height: 25px;
+    transition: all 0.3s;
+}
+
+header ul li a span.menu-text:hover {
+    transform: translateY(-25px);
+}
+
+header .header-btn {
+    width: 25%;
+    justify-content: flex-end;
+}
+/* ====================
+  End Header 
+==================== */
+
+/* ====================
+  Hero
+==================== */
 .hero {
     width: 100%;
     padding: 80px 15px;
     height: 100vh;
     position: relative;
+    overflow: hidden;
 }
 
 .hero::before {
@@ -33,7 +101,7 @@
 }
 
 .hero .hero-title {
-    font-size: 13vw;
+    font-size: 12vw;
     line-height: 0.9;
     text-align: center;
     z-index: 0;
@@ -84,3 +152,7 @@
     font-weight: 300;
     font-size: 16px;
 }
+
+/* ====================
+  End Hero
+==================== */
