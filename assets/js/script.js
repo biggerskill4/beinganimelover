@@ -3,9 +3,6 @@ const lenis = new Lenis({
   autoRaf: true,
 });
 
-// Scrolltrigger
-gsap.registerPlugin(ScrollTrigger);
-
 // Cursor
 const cursor = document.querySelector(".custom-cursor");
 const cursorCircle = document.querySelector(".custom-cursor-circle");
@@ -60,8 +57,22 @@ links.forEach(link => {
         });
     });
 });
+// End Cursor
 // ====================================
 
+
+// Menu
+// header
+const navLinks = document.querySelectorAll("header .menu ul li a");
+
+navLinks.forEach(link => {
+  
+  const navLinksText = link.querySelector("header .menu ul li a span.menu-text");
+  const data = link.getAttribute("data-text");
+  navLinksText.innerHTML = `<span>${data}</span><span>${data}</span>`;
+});
+// header end
+// ====================================
 
 // imageMove
 const heroSection = document.querySelector('.hero');
