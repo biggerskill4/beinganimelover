@@ -231,7 +231,7 @@ header .header-btn {
 
 @media (max-width: 550px) {
     .hero {
-        height: 65vh;
+        height: 60vh;
     }
 
     .hero .hero-cards {
