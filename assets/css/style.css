@@ -154,3 +154,17 @@ a {
        --max-width: 100%; 
     }
 }
+
+@media(max-width:768px) {
+    .custom-cursor-circle, .custom-cursor {
+        display: none;
+    }    
+}
+
+@media(max-width:550px) {
+    .cta {
+        font-size: 14px;
+        padding: 10px 15px;
+        gap: 6px;
+    }
+}
