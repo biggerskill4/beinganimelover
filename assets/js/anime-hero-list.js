@@ -13,7 +13,7 @@ const animeHeroList = [
   {
     animeName: "Demon Slayer",
     characterName: "Tanjiro Kamado",
-    characterImage: "images/tanjiro.png",
+    characterImage: "./assets/images/anime-character/demon-slayer/tanjiro.webp",
     bgImage: "images/demon_slayer_bg.jpg",
     cards: [
       { title: "Water Breathing", description: "Master of the Water Breathing sword technique." },
@@ -35,7 +35,7 @@ const animeHeroList = [
   {
     animeName: "Nier: Automata",
     characterName: "2B",
-    characterImage: "./assets/images/anime-character/nier-automata/2b_slide.webp",
+    characterImage: "./assets/images/anime-character/nier-automata/2b.webp",
     bgImage: "./assets/images/hero/2b/bg-hero.webp",
     cards: [
       { title: "Yorha 2B", description: "An elite combat android engineered to eliminate machine lifeforms and restore control of Earth, 2B executes missions with unmatched and lethal efficiency." },
@@ -46,7 +46,7 @@ const animeHeroList = [
   {
     animeName: "The Girl Downstairs",
     characterName: "Shiya Li",
-    characterImage: "./assets/images/anime-character/shiya-li/shiya_li.webp",
+    characterImage: "./assets/images/anime-character/the-girl-downstairs/shiya_li.webp",
     bgImage: "./assets/images/hero/2b/bg-hero.webp",
     cards: [
       { title: "Shiya Li", description: "An elite combat android engineered to eliminate machine lifeforms and restore control of Earth, 2B executes missions with unmatched and lethal efficiency." },
