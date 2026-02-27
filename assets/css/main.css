@@ -78,7 +78,7 @@ header .header-btn {
     }
 
     header .site-logo img {
-        width: 120px;
+        width: 130px;
     }
 }
 
@@ -162,7 +162,7 @@ header .header-btn {
     background: var(--card-bg);
     backdrop-filter: blur(5px);
     border-radius: 30px;
-    border: 1px solid #ffffff14;
+    border: 1px solid var(--card-bg);
     display: flex;
     flex-direction: column;
     gap: 15px;
@@ -172,21 +172,34 @@ header .header-btn {
     font-size: 30px;
     font-weight: 500;
     letter-spacing: 2px;
+    text-shadow: 0 0 10px #363636;
 }
 
 .hero .hero-cards .card p {
     font-weight: 300;
     font-size: 16px;
+    text-shadow: 0 0 10px #363636;
 }
+
 .hero .hero-cards .card:last-child {
     justify-content: space-between;
     text-align: center;
 }
+
 .hero .hero-cards .card:last-child h3 {
     letter-spacing: 10px;
 }
+
 .hero .hero-cards .card img {
     width: 100%;
+}
+
+@media (max-height: 800px) {
+
+    .hero {
+        height: 120vh;
+    }
+
 }
 
 @media (max-width: 1440px) {
@@ -195,7 +208,7 @@ header .header-btn {
     }
 
     .hero .hero-cards .card h3 {
-        font-size: 30px;
+        font-size: 26px;
     }
 }
 
