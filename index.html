@@ -12,6 +12,10 @@
     <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
     <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
 
+    <!-- Link Swiper's CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@12/swiper-bundle.min.css" />
+
+
     <!-- lenis -->
     <script src="https://unpkg.com/lenis@1.3.17/dist/lenis.min.js"></script>
     <!-- css -->
@@ -73,29 +77,16 @@
     <!-- End Header -->
 
     <!-- Hero -->
-    <section class="hero flex">
+    <section class="hero flex-col">
         <!-- hero bg -->
         <img src="./assets/images/anime-character/bg-hero.webp" alt="Background" class="hero-bg-img">
-        <div class="container flex-col">
-
-            <!-- hero bg name -->
-            <h2 class="hero-title"></h2>
-
-            <!-- hero character img -->
-            <img src="" alt="Character" class="character">
-
-            <!-- hero cards -->
-            <div class="hero-cards">
-                <div class="card cardOne"></div>
-                <div class="card cardTwo"></div>
-                <div class="card cardThree"></div>
-                <div class="card">
-                    <h3>DANGER</h3>
-                    <img src="./assets/images/danger.webp" alt="Danger">
-                </div>
-            </div>
+        
+        <div class="swiper myHeroSwiper">
+            <div class="swiper-wrapper" id="hero-slider"></div>
+            <div class="swiper-pagination"></div>
         </div>
     </section>
+
     <!-- End Hero -->
 
 
@@ -116,7 +107,8 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.13.0/ScrollTrigger.min.js"
         integrity="sha512-P2IDYZfqSwjcSjX0BKeNhwRUH8zRPGlgcWl5n6gBLzdi4Y5/0O4zaXrtO4K9TZK6Hn1BenYpKowuCavNandERg=="
         crossorigin="anonymous" referrerpolicy="no-referrer"></script>
-
+    <!-- Swiper JS -->
+    <script src="https://cdn.jsdelivr.net/npm/swiper@12/swiper-bundle.min.js"></script>
     <!-- js -->
     <script src="./assets/js/anime-hero-list.js"></script>
     <script src="./assets/js/script.js"></script>

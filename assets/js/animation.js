@@ -64,10 +64,10 @@ links.forEach(link => {
 const navLinks = document.querySelectorAll("header .menu ul li a");
 
 navLinks.forEach(link => {
-  
-  const navLinksText = link.querySelector("header .menu ul li a span.menu-text");
-  const data = link.getAttribute("data-text");
-  navLinksText.innerHTML = `<span>${data}</span><span>${data}</span>`;
+
+    const navLinksText = link.querySelector("header .menu ul li a span.menu-text");
+    const data = link.getAttribute("data-text");
+    navLinksText.innerHTML = `<span>${data}</span><span>${data}</span>`;
 });
 // header end
 // ====================================
@@ -97,3 +97,65 @@ heroSection.addEventListener('mousemove', (e) => {
         ease: "power2.out"
     });
 });
+
+// =========================
+// Hero Slider
+// =========================
+// Initialize Swiper
+const swiper = new Swiper(".myHeroSwiper", {
+  loop: true,
+  pagination: {
+    el: ".swiper-pagination",
+    clickable: true,
+  },
+  autoplay: {
+    delay: 5000,
+    disableOnInteraction: false,
+  },
+  effect: "fade",
+});
+
+function resetSlide(slide) {
+  gsap.set(slide.querySelector(".hero-title"), { opacity: 0, y: -50 });
+  gsap.set(slide.querySelector(".character"), { opacity: 0, scale: 0.8 });
+  gsap.set(slide.querySelectorAll(".hero-cards .card"), { opacity: 0, y: 30 });
+}
+
+function animateSlide(slide) {
+  gsap.to(slide.querySelector(".hero-title"), {
+    opacity: 1,
+    y: 0,
+    duration: 1,
+    ease: "power3.out",
+  });
+
+  gsap.to(slide.querySelector(".character"), {
+    opacity: 1,
+    scale: 1,
+    duration: 1.2,
+    ease: "power3.out",
+  });
+
+  gsap.to(slide.querySelectorAll(".hero-cards .card"), {
+    opacity: 1,
+    y: 0,
+    duration: 0.8,
+    stagger: 0.2,
+    ease: "power3.out",
+  });
+}
+
+// Animate first slide
+const slides = document.querySelectorAll(".swiper-slide");
+slides.forEach(slide => resetSlide(slide));
+animateSlide(document.querySelector(".swiper-slide-active"));
+
+// Animate on slide change
+swiper.on("slideChangeTransitionStart", () => {
+  slides.forEach(slide => resetSlide(slide));
+  const activeSlide = document.querySelector(".swiper-slide-active");
+  animateSlide(activeSlide); // animate only active
+});
+// =========================
+// End Hero Slider
+// =========================

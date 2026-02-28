@@ -91,7 +91,6 @@ header .header-btn {
 ==================== */
 .hero {
     width: 100%;
-    padding: 80px 15px;
     height: 100vh;
     position: relative;
     overflow: hidden;
@@ -104,11 +103,25 @@ header .header-btn {
     left: 0;
     width: 100%;
     height: 100%;
-    background: #14141469;
     background: #00000098;
     backdrop-filter: blur(5px);
     z-index: 0;
 }
+
+.hero .swiper {
+    width: 100%;
+    height: 100%;
+}
+
+.hero .swiper-slide {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    padding: 80px 15px;
+    width: var(--max-width);
+}
+
 
 .hero img.hero-bg-img {
     width: 120%;
@@ -256,7 +269,7 @@ header .header-btn {
 
 @media (max-width: 550px) {
     .hero {
-        height: 60vh;
+        height: 65vh;
     }
 
     .hero .hero-cards {
