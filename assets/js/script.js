@@ -1,40 +1,60 @@
+// =========================
 // Initialize Lenis
+// =========================
 const lenis = new Lenis({
   autoRaf: true,
 });
+// =========================
+// End Initialize Lenis
+// =========================
 
 // =========================
 // Dynamic Hero Section Data
 // =========================
-const hero = document.querySelector(".hero");
-// Data
-let heroAnimeName = document.querySelector(".hero .hero-title");
-let heroAnimeCharacter = document.querySelector(".hero img.character");
-// let heroAnimeBg = document.querySelector(".hero img.hero-bg-img");
-// Cards
-let heroCardOne = document.querySelector(".hero .cardOne");
-let heroCardTwo = document.querySelector(".hero .cardTwo");
-let heroCardThree = document.querySelector(".hero .cardThree");
+// Trigger anime name randomly (or you can set manually)
+function getRandomAnimeName() {
+  const lastAnimeIndex = localStorage.getItem("lastAnimeIndex");
+  let newIndex;
 
-// Display Dynamic Data
-function heroRandomData() {
+  do {
+    newIndex = Math.floor(Math.random() * animeHeroList.length);
+  } while (newIndex == lastAnimeIndex && animeHeroList.length > 1);
 
-  // Get the anime object
-  const randomIndex = getRandomAnimeIndex();
-  const animeToShow = animeHeroList[randomIndex];
+  localStorage.setItem("lastAnimeIndex", newIndex);
+  return animeHeroList[newIndex].animeName;
+}
 
-  heroAnimeName.textContent = animeToShow.animeName;
-  heroAnimeCharacter.src = animeToShow.characterImage;
+const triggerAnime = getRandomAnimeName();
 
-  // Cards
-  heroCardOne.innerHTML = `<h3>${animeToShow.cards[0].title}</h3><p>${animeToShow.cards[0].description}</p>`;
-  heroCardTwo.innerHTML = `<h3>${animeToShow.cards[1].title}</h3><p>${animeToShow.cards[1].description}</p>`;
-  heroCardThree.innerHTML = `<h3>${animeToShow.cards[2].title}</h3><p>${animeToShow.cards[2].description}</p>`;
+// Get the swiper wrapper
+const heroSlider = document.getElementById("hero-slider");
 
-};
+// Find the anime object
+const animeToShow = animeHeroList.find(a => a.animeName === triggerAnime);
 
-
-heroRandomData();
+// Create slides for each character
+animeToShow.characters.forEach(char => {
+  const slide = document.createElement("div");
+  slide.classList.add("swiper-slide");
+  // Use template literal for inner HTML
+  slide.innerHTML = `
+    <h2 class="hero-title">${animeToShow.animeName}</h2>
+    <img class="character" src="${char.characterImage}" alt="${char.characterName}">
+    <div class="hero-cards">
+      ${char.cards.map((card, index) => `
+        <div class="card card${index + 1}">
+          <h3>${card.title}</h3>
+          <p>${card.description}</p>
+        </div>
+      `).join('')}
+      <div class="card">
+        <h3>DANGER</h3>
+        <img src="./assets/images/danger.webp" alt="Danger">
+      </div>
+    </div>
+  `;
+  heroSlider.appendChild(slide);
+});
 // =============================
 // End Dynamic Hero Section Data
 // =============================
