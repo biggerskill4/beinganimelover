@@ -101,7 +101,6 @@ heroSection.addEventListener('mousemove', (e) => {
 // =========================
 // Hero Slider
 // =========================
-// Initialize Swiper
 const swiper = new Swiper(".myHeroSwiper", {
   loop: true,
   pagination: {
@@ -153,7 +152,9 @@ animateSlide(document.querySelector(".swiper-slide-active"));
 // Animate on slide change
 swiper.on("slideChangeTransitionStart", () => {
   slides.forEach(slide => resetSlide(slide));
+  slides.forEach(slide => slide.style.opacity = '0');
   const activeSlide = document.querySelector(".swiper-slide-active");
+  activeSlide.style.opacity = '1';
   animateSlide(activeSlide); // animate only active
 });
 // =========================
