@@ -1,5 +1,22 @@
-// Scrolltrigger
-gsap.registerPlugin(ScrollTrigger);
+gsap.registerPlugin(ScrollTrigger, ScrollSmoother);
+// =========================
+// Initialize Lenis
+// =========================
+
+// Initialize ScrollSmoother
+const smoother = ScrollSmoother.create({
+  wrapper: ".smooth-wrapper",
+  content: ".smooth-conten",
+  smooth: 1.2,     
+  effects: true 
+});
+
+// Optional: Sync ScrollTrigger with smoother
+ScrollTrigger.addEventListener("refresh", () => smoother.content());
+
+// =========================
+// End Initialize Lenis
+// =========================
 
 // Cursor
 const cursor = document.querySelector(".custom-cursor");

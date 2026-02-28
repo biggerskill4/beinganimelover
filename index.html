@@ -29,76 +29,120 @@
     <div class="custom-cursor-circle"></div>
     <!-- custom cursor end -->
 
-    <!-- header -->
-    <header class="flex">
-        <div class="container flex">
-            <div class="site-logo flex">
-                <a href="./index.html">
-                    <img src="./assets/images/logo.svg" alt="Logo">
-                </a>
-            </div>
-            <div class="menu flex">
-                <ul class="flex">
-                    <li>
-                        <a href="#" class="active flex-col" data-text="Home">
-                            <span class="menu-text">Home</span>
+    <div class="smooth-wrapper">
+        <div class="smooth-conten">
+            <!-- header -->
+            <header class="flex">
+                <div class="container flex">
+                    <div class="site-logo flex">
+                        <a href="./index.html">
+                            <img src="./assets/images/logo.svg" alt="Logo">
                         </a>
-                    </li>
-                    <li>
-                        <a href="#" class="flex-col" data-text="Anime">
-                            <span class="menu-text">Anime</span>
+                    </div>
+                    <div class="menu flex">
+                        <ul class="flex">
+                            <li>
+                                <a href="#" class="active flex-col" data-text="Home">
+                                    <span class="menu-text">Home</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#" class="flex-col" data-text="Anime">
+                                    <span class="menu-text">Anime</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#" class="flex-col" data-text="Categories">
+                                    <span class="menu-text">Categories</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#" class="flex-col" data-text="Videos">
+                                    <span class="menu-text">Videos</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#" class="flex-col" data-text="About">
+                                    <span class="menu-text">About</span>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="header-btn flex">
+                        <a href="#" class="cta flex">
+                            <span class="cta-text flex">Subscribe</span> <span class="flex"><ion-icon
+                                    name="logo-youtube"></ion-icon></span>
                         </a>
-                    </li>
-                    <li>
-                        <a href="#" class="flex-col" data-text="Categories">
-                            <span class="menu-text">Categories</span>
-                        </a>
-                    </li>
-                    <li>
-                        <a href="#" class="flex-col" data-text="Videos">
-                            <span class="menu-text">Videos</span>
-                        </a>
-                    </li>
-                    <li>
-                        <a href="#" class="flex-col" data-text="About">
-                            <span class="menu-text">About</span>
-                        </a>
-                    </li>
-                </ul>
-            </div>
-            <div class="header-btn flex">
-                <a href="#" class="cta flex">
-                    <span class="cta-text flex">Subscribe</span> <span class="flex"><ion-icon
-                            name="logo-youtube"></ion-icon></span>
-                </a>
-            </div>
+                    </div>
+                </div>
+            </header>
+            <!-- End Header -->
+
+            <!-- Hero -->
+            <section class="hero flex-col">
+                <!-- hero bg -->
+                <img src="./assets/images/anime-character/bg-hero.webp" alt="Background" class="hero-bg-img">
+
+                <div class="swiper myHeroSwiper">
+                    <div class="swiper-wrapper" id="hero-slider"></div>
+                    <div class="swiper-pagination"></div>
+                </div>
+            </section>
+
+            <!-- End Hero -->
+
+            <!-- youtube videos -->
+            <section class="latest-videos flex">
+                <div class="container flex-col">
+                    <h2>Latest Videos</h2>
+                    <div class="video-grid">
+
+                        <div class="video-card">
+                            <iframe src="https://www.youtube.com/embed/uF4Mboa-k9U" title="YouTube Shorts"
+                                frameborder="0" allowfullscreen>
+                            </iframe>
+                        </div>
+
+                        <div class="video-card">
+                            <iframe src="https://www.youtube.com/embed/buzoQ5ruYEQ" title="YouTube Shorts"
+                                frameborder="0" allowfullscreen>
+                            </iframe>
+                        </div>
+
+                        <div class="video-card">
+                            <iframe src="https://www.youtube.com/embed/1BM0ljFm6f8" title="YouTube Shorts"
+                                frameborder="0" allowfullscreen>
+                            </iframe>
+                        </div>
+
+                        <div class="video-card">
+                            <iframe src="https://www.youtube.com/embed/IBWNZt5jLIk" title="YouTube Shorts"
+                                frameborder="0" allowfullscreen>
+                            </iframe>
+                        </div>  
+
+                        <div class="video-card">
+                            <iframe src="https://www.youtube.com/embed/qnmZ7tB8Do4" title="YouTube Shorts"
+                                frameborder="0" allowfullscreen>
+                            </iframe>
+                        </div>
+
+                    </div>
+                </div>
+            </section>
+
+
+
+            <!-- Under Construction -->
+            <section class="under-construction flex">
+                <div class="container flex-col">
+                    <h2>Under Construction</h2>
+                    <img src="./assets/images/uc.webp" alt="">
+                </div>
+            </section>
+            <!-- End Under Construction -->
         </div>
-    </header>
-    <!-- End Header -->
-
-    <!-- Hero -->
-    <section class="hero flex-col">
-        <!-- hero bg -->
-        <img src="./assets/images/anime-character/bg-hero.webp" alt="Background" class="hero-bg-img">
-        
-        <div class="swiper myHeroSwiper">
-            <div class="swiper-wrapper" id="hero-slider"></div>
-            <div class="swiper-pagination"></div>
-        </div>
-    </section>
-
-    <!-- End Hero -->
-
-
-
-    <!-- Under Construction -->
-    <section class="under-construction flex">
-        <div class="container flex-col">
-            <h2>Under Construction</h2>
-            <img src="./assets/images/uc.webp" alt="">
-        </div>
-    </section>
-    <!-- End Under Construction -->
+    </div>
 
     <!-- GSAP -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.13.0/gsap.min.js"
@@ -107,6 +151,7 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.13.0/ScrollTrigger.min.js"
         integrity="sha512-P2IDYZfqSwjcSjX0BKeNhwRUH8zRPGlgcWl5n6gBLzdi4Y5/0O4zaXrtO4K9TZK6Hn1BenYpKowuCavNandERg=="
         crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.13.0/ScrollSmoother.min.js" integrity="sha512-t4hwZimhnCKT3YLAsEcAcRDkngVFfCcUIfNLIjklrIZAZKD+GfQMP7HbRcsVHxNS48WRBSywNU1uSM2zzLQt1Q==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
     <!-- Swiper JS -->
     <script src="https://cdn.jsdelivr.net/npm/swiper@12/swiper-bundle.min.js"></script>
     <!-- js -->
