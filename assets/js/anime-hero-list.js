@@ -46,6 +46,16 @@ const animeHeroList = [
           { title: "Protective Sister", description: "Protects Tanjiro and fights demons." },
           { title: "Strong & Agile", description: "Enhanced speed and strength." }
         ]
+      },
+      {
+        characterName: "Nezuko Kamado",
+        characterImage: "./assets/images/anime-character/demon-slayer/nezuko.webp",
+        bgImage: "./assets/images/hero/demon_slayer_bg.jpg",
+        cards: [
+          { title: "Demon Powers", description: "Transforms into a demon but retains human emotions." },
+          { title: "Protective Sister", description: "Protects Tanjiro and fights demons." },
+          { title: "Strong & Agile", description: "Enhanced speed and strength." }
+        ]
       }
     ]
   },
