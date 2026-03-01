@@ -1,7 +1,6 @@
 // =========================
 // Dynamic Hero Section Data
 // =========================
-
 // Trigger anime name randomly (or you can set manually)
 function getRandomAnimeName() {
   const lastAnimeIndex = localStorage.getItem("lastAnimeIndex");
