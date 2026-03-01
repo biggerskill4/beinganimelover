@@ -42,7 +42,7 @@ window.addEventListener("mousemove", (e) => {
 });
 
 // All links Cursor Hover Effect
-const links = document.querySelectorAll("a, button, .cta");
+const links = document.querySelectorAll("a, button, .cta, .character-card");
 
 links.forEach(link => {
   link.addEventListener("mouseenter", () => {
