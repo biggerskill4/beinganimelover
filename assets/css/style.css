@@ -90,10 +90,11 @@ a {
     overflow: hidden;
     &:hover {
         color: var(--black-color);
+        background: var(--accent-hover);
     }
 }
 
-.cta::before {
+/* .cta::before {
     content: '';
     position: absolute;
     top: 0;
@@ -108,7 +109,7 @@ a {
 
 .cta:hover::before {
     width: 100%;
-}
+} */
 
 .cta span.rotate {
     transform: rotate(-45deg);
@@ -128,6 +129,25 @@ a {
     flex-direction: column;
     gap: 20px;
 }
+
+/* scroll bar */
+/* width */
+::-webkit-scrollbar {
+  width: 5px;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: var(--primary-color); 
+  border-radius: 10px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background: var(--card-bg); 
+  border-radius: 10px;
+}
+/* End scroll bar */
 
 /* Under Construction */
 .under-construction {
