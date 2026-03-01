@@ -4,7 +4,7 @@ const animeHeroList = [
     characters: [
       {
         characterName: "Eren Yeager",
-        characterImage: "./assets/images/anime-character/attack-on-titan/eren.webp",
+        characterImage: "./assets/images/anime-character/aot/eren_yeager.webp",
         bgImage: "./assets/images/hero/attack_on_titan_bg.jpg",
         cards: [
           { title: "Power of Titans", description: "Eren possesses the ability to transform into a Titan." },
@@ -14,7 +14,7 @@ const animeHeroList = [
       },
       {
         characterName: "Mikasa Ackerman",
-        characterImage: "./assets/images/anime-character/attack-on-titan/mikasa.webp",
+        characterImage: "./assets/images/anime-character/aot/mikasa.webp",
         bgImage: "./assets/images/hero/attack_on_titan_bg.jpg",
         cards: [
           { title: "Elite Fighter", description: "One of humanity’s strongest soldiers." },
