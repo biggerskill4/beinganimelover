@@ -1,9 +1,7 @@
 gsap.registerPlugin(ScrollTrigger, ScrollSmoother);
 // =========================
-// Initialize Lenis
-// =========================
-
-// Initialize ScrollSmoother
+// Initialize Smooth
+// ==============
 const smoother = ScrollSmoother.create({
   wrapper: ".smooth-wrapper",
   content: ".smooth-conten",
@@ -13,12 +11,15 @@ const smoother = ScrollSmoother.create({
 
 // Optional: Sync ScrollTrigger with smoother
 ScrollTrigger.addEventListener("refresh", () => smoother.content());
-
 // =========================
 // End Initialize Lenis
 // =========================
 
+
+
+// =========================
 // Cursor
+// =========================
 const cursor = document.querySelector(".custom-cursor");
 const cursorCircle = document.querySelector(".custom-cursor-circle");
 
@@ -102,13 +103,14 @@ iFrame.forEach(frame => {
   });
 
 });
-
+// =========================
 // End Cursor
-// ====================================
+// =========================
 
 
-// Menu
-// header
+// =========================
+// Header Menu
+// =========================
 const navLinks = document.querySelectorAll("header .menu ul li a");
 
 navLinks.forEach(link => {
@@ -117,10 +119,14 @@ navLinks.forEach(link => {
   const data = link.getAttribute("data-text");
   navLinksText.innerHTML = `<span>${data}</span><span>${data}</span>`;
 });
-// header end
-// ====================================
+// =========================
+// End Header Menu
+// =========================
 
-// imageMove
+
+// =========================
+// Hero Image
+// =========================
 const heroSection = document.querySelector('.hero');
 const heroImg = document.querySelectorAll('.hero img.character');
 const heroBgImg = document.querySelector('.hero img.hero-bg-img');
@@ -145,6 +151,10 @@ heroSection.addEventListener('mousemove', (e) => {
     ease: "power2.out"
   });
 });
+// =========================
+// End Hero Image
+// =========================
+
 
 // =========================
 // Hero Slider
