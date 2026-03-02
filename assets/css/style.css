@@ -84,6 +84,7 @@ a {
     font-size: 18px;
     font-weight: 500;
     border-radius: 50px;
+    border: 1px solid var(--accent-color);
     padding: 12px 20px 12px 20px;
     gap: 15px;
     position: relative;
@@ -95,6 +96,7 @@ a {
     &:hover {
         color: var(--black-color);
         background: var(--accent-hover);
+        border: 1px solid var(--accent-hover);
     }
     &.cta-circle {
         width: 50px;
@@ -102,6 +104,13 @@ a {
         border-radius: 50px;
         font-size: 30px;
         padding: 15px;
+    }
+    &.cta-outline {
+        background: transparent;
+        border: 1px solid var(--white-color);
+        &:hover {
+            background: var(--accent-hover);
+        }
     }
 }
 
@@ -167,7 +176,7 @@ a {
 }
 .under-construction .container {
     width: var(--max-width);
-    justify-content: center;
+    justify-content: flex-start;
     align-items: center;
     gap: 50px;
     background: var(--white-color);
@@ -221,5 +230,8 @@ a {
     }
     h2 {
         font-size: 30px;
+    }
+    p {
+        font-size: 16px;
     } 
 }

@@ -42,7 +42,7 @@ window.addEventListener("mousemove", (e) => {
 });
 
 // All links Cursor Hover Effect
-const links = document.querySelectorAll("a, button, .cta, .character-card");
+const links = document.querySelectorAll("a, button, .cta, .changeCursor");
 
 links.forEach(link => {
   link.addEventListener("mouseenter", () => {
@@ -105,6 +105,23 @@ iFrame.forEach(frame => {
 });
 // =========================
 // End Cursor
+// =========================
+
+// =========================
+// Parallax Effect
+// =========================
+gsap.to(".parallax-img", {
+  y: -150,
+  ease: "none",
+  scrollTrigger: {
+    trigger: ".parallax-section",
+    start: "top bottom",
+    end: "bottom top",
+    scrub: true
+  }
+});
+// =========================
+// End Parallax Effect
 // =========================
 
 
@@ -218,3 +235,22 @@ swiper.on("slideChangeTransitionStart", () => {
 // =========================
 // End Hero Slider
 // =========================
+
+// =========================
+// Featured Anime
+// =========================
+gsap.from(".anime-card", {
+  y: 80,
+  opacity: 0,
+  duration: 1,
+  stagger: 0.2,
+  ease: "power3.out",
+  scrollTrigger: {
+    trigger: ".featured-anime",
+    start: "top 75%",
+  }
+});
+// =========================
+// End Featured Anime
+// =========================
+
