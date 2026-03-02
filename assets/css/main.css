@@ -426,6 +426,10 @@ header .header-btn {
         padding: 40px 15px;
     }
 
+    .latest-videos .container {
+        gap: 20px;
+    }
+
     .latest-videos .video-grid {
         grid-template-columns: repeat(1, 1fr);
         gap: 10px;
@@ -476,8 +480,7 @@ header .header-btn {
     width: 100%;
     background: var(--bg-color);
     border-radius: 30px;
-    padding: 15px;
-    padding-bottom: 25px;
+    /* padding: 15px; */
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -485,10 +488,11 @@ header .header-btn {
     border: 1px solid #ffffff1a;
     gap: 20px;
     transition: all 0.3s;
+    position: relative;
 }
 
 .character-spotlight .character-card .char-img {
-    height: 400px;
+    height: 500px;
     width: 100%;
     background: url(../images/anime-character/bg-hero.webp);
     background-position: center center;
@@ -502,23 +506,34 @@ header .header-btn {
 .character-card .char-img img {
     width: 100%;
     height: 100%;
-    object-fit: contain;
-    object-position: bottom;
-    transition: all 0.3s;
+    object-fit: cover;
+    transition: all 0.4s ease;
 }
 
 .character-spotlight .character-card:hover img {
     transform: scale(1.1);
+    filter: saturate(0.5) brightness(0.5);
 }
 
 .character-spotlight .character-card h3 {
     font-size: 34px;
     margin-top: 10px;
+    position: absolute;
+    text-align: center;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    opacity: 0;
+    transition: all 0.3s;
+}
+
+.character-spotlight .character-card:hover h3 {
+    opacity: 1;
 }
 
 @media (max-width: 1440px) {
     .character-spotlight .character-card .char-img {
-        height: 300px;
+        height: 400px;
         object-position: bottom;
     }
 }
@@ -531,11 +546,11 @@ header .header-btn {
 
 @media (max-width: 550px) {
     .character-spotlight {
-        padding: 10px 5px;
+        padding: 10px 10px;
     }
 
     .character-spotlight .section-spacing {
-        padding: 30px 10px;
+        padding: 30px 20px;
         border-radius: 30px;
     }
 
@@ -545,11 +560,11 @@ header .header-btn {
 
     .character-spotlight .cards-grid {
         grid-template-columns: repeat(1, 1fr);
-        gap: 10px;
+        gap: 20px;
     }
 
     .character-spotlight .character-card .char-img {
-        height: 200px;
+        height: 350px;
     }
 
     .character-spotlight .character-card h3 {
@@ -568,7 +583,7 @@ header .header-btn {
 ==================== */
 .about-section {
     width: 100%;
-    padding: 80px 15px;
+    padding: 80px 15px 15px;
 }
 
 .about-section .container {
@@ -612,7 +627,7 @@ header .header-btn {
 @media (max-width: 550px) {
     .about-section {
         width: 100%;
-        padding: 30px 15px;
+        padding: 40px 15px 15px;
     }
 
     .about-section .about-title h2 {
@@ -623,6 +638,7 @@ header .header-btn {
     .about-section .about-content p {
         font-size: 16px;
     }
+
     .about-section .about-content .social-links {
         gap: 10px;
     }
@@ -630,4 +646,288 @@ header .header-btn {
 
 /* ====================
   End About Us
+==================== */
+
+/* ====================
+  Parallax Image
+==================== */
+.parallax-section {
+    width: 100%;
+    padding: 60px 15px 30px;
+}
+
+.parallax-section .container {
+    width: var(--max-width);
+    position: relative;
+    border-radius: 50px;
+    overflow: hidden;
+    background: #FFF;
+    height: 750px;
+}
+
+.parallax-section .parallax-img {
+    width: 100%;
+    object-fit: cover;
+    display: block;
+    height: 1080px;
+}
+
+@media (max-width: 1440px) {
+    .parallax-section {
+        padding: 15px;
+    }
+
+    .parallax-section .container {
+        height: 500px;
+    }
+
+    .parallax-section .parallax-img {
+        height: 800px;
+    }
+}
+
+@media (max-width: 550px) {
+
+    .parallax-section .container {
+        height: 350px;
+        border-radius: 30px;
+    }
+
+    .parallax-section .parallax-img {
+        height: 650px;
+    }
+}
+
+/* ====================
+  End Parallax Image
+==================== */
+
+
+/* ====================
+  Featured Anime
+==================== */
+.featured-anime {
+    padding: 60px 15px 80px;
+    width: 100%;
+}
+
+.featured-anime .container {
+    width: var(--max-width);
+}
+
+.anime-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 30px;
+    width: 100%;
+    margin-top: 20px;
+}
+
+.anime-card h3 {
+    margin-top: 15px;
+    font-size: 30px;
+    letter-spacing: 1px;
+    text-align: center;
+}
+
+.anime-poster {
+    position: relative;
+    overflow: hidden;
+    border-radius: 30px;
+}
+
+.anime-poster img {
+    width: 100%;
+    aspect-ratio: 2 / 3;
+    object-fit: cover;
+    transition: transform 0.4s ease;
+    transform: scale(1.03);
+}
+
+.anime-overlay {
+    position: absolute;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.85);
+    opacity: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    text-align: center;
+    transition: opacity 0.4s ease;
+}
+
+.anime-overlay p {
+    font-size: 16px;
+    margin-bottom: 20px;
+    color: #ccc;
+}
+
+.anime-card:hover img {
+    transform: scale(1.2);
+}
+
+.anime-card:hover .anime-overlay {
+    opacity: 1;
+}
+
+.anime-buttons {
+    display: flex;
+    gap: 10px;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.anime-buttons .cta {
+    padding: 8px 10px;
+    font-size: 13px;
+}
+
+.anime-buttons .cta-white {
+    background: var(--accent-hover);
+    color: var(--black-color);
+    border: 1px solid var(--accent-hover);
+
+    &:hover {
+        background: var(--accent-color);
+        color: var(--white-color);
+        border: 1px solid var(--accent-color);
+    }
+}
+
+@media (max-width: 550px) {
+    .featured-anime {
+        padding: 30px 20px;
+    }
+
+    .featured-anime .container {
+        gap: 10px;
+    }
+
+    .anime-poster img {
+        aspect-ratio: 1 / 1;
+    }
+
+    .anime-card h3 {
+        font-size: 24px;
+    }
+}
+
+/* ====================
+  End Featured Anime
+==================== */
+
+/* ====================
+  Footer
+==================== */
+footer {
+    background: var(--card-bg);
+    padding: 80px 15px 0;
+}
+
+footer .container {
+    width: var(--max-width);
+    gap: 40px;
+}
+
+footer .footer-col {
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    gap: 15px;
+}
+
+footer .footer-col p {
+    color: #ffffffc7;
+}
+
+footer .footer-bottom {
+    border-top: 1px solid #ffffff23;
+    width: 100%;
+    padding: 20px 0;
+    margin-top: 30px;
+}
+
+footer .footer-bottom p {
+    font-size: 17px;
+    color: #ffffffda;
+}
+
+footer .footer-col h3 {
+    font-size: 60px;
+    text-align: left;
+}
+
+footer .footer-col p {
+    width: 80%;
+}
+
+footer .footer-links {
+    align-items: flex-end;
+}
+
+footer .footer-col h4 {
+    font-size: 40px;
+}
+
+footer .footer-col ul {
+    display: flex;
+    gap: 20px;
+    list-style: none;
+}
+
+footer .social-icons {
+    gap: 10px;
+}
+
+@media (max-width: 768px) {
+    footer .container {
+        flex-wrap: wrap;
+    }
+
+    footer .footer-col {
+        width: 100%;
+    }
+
+    footer .footer-col h3 {
+        font-size: 40px;
+    }
+
+    footer .footer-col h4 {
+        font-size: 30px;
+    }
+
+    footer .footer-links {
+        align-items: flex-start;
+    }
+}
+
+@media (max-width: 550px) {
+    footer .footer-col h3 {
+        font-size: 24px;
+        letter-spacing: 1px;
+    }
+
+    footer .footer-col h4 {
+        font-size: 22px;
+        letter-spacing: 1px;
+    }
+
+    footer .footer-bottom {
+        margin-top: 10px;
+    }
+
+    footer .footer-bottom p {
+        font-size: 14px;
+    }
+    footer .footer-col ul a {
+        font-size: 15px;
+    }
+}
+
+/* ====================
+  End Footer
 ==================== */
