@@ -124,6 +124,25 @@ gsap.to(".parallax-img", {
 // End Parallax Effect
 // =========================
 
+// =========================
+// Gsap Fade
+// =========================
+gsap.utils.toArray(".gsap-fade-up").forEach((el) => {
+  gsap.from(el, {
+    y: 80,
+    opacity: 0,
+    duration: 1,
+    ease: "power3.out",
+    scrollTrigger: {
+      trigger: el,
+      start: "top 85%",
+      toggleActions: "play none none none",
+    }
+  });
+});
+// =========================
+// End Gsap Fade
+// =========================
 
 // =========================
 // Header Menu
@@ -235,6 +254,48 @@ swiper.on("slideChangeTransitionStart", () => {
 // =========================
 // End Hero Slider
 // =========================
+
+
+gsap.utils.toArray(".split-text").forEach((text) => {
+
+  function splitLetters(element) {
+    const nodes = [...element.childNodes];
+
+    nodes.forEach(node => {
+
+      if (node.nodeType === 3) {
+        const letters = node.textContent.split("");
+        const frag = document.createDocumentFragment();
+
+        letters.forEach(letter => {
+          const span = document.createElement("span");
+          span.textContent = letter;
+          frag.appendChild(span);
+        });
+
+        node.replaceWith(frag);
+      }
+      else if (node.nodeType === 1) {
+        splitLetters(node);
+      }
+
+    });
+  }
+
+  splitLetters(text);
+
+  gsap.to(text.querySelectorAll("span"), {
+    color: "#FFFFFF",
+    stagger: 0.01,
+    scrollTrigger: {
+      trigger: text,
+      start: "top 80%",
+      end: "bottom 50%",
+      scrub: true
+    }
+  });
+
+});
 
 // =========================
 // Featured Anime
