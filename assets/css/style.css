@@ -169,6 +169,11 @@ a {
 }
 /* End scroll bar */
 
+::selection {
+  color: var(--bg-color);
+  background: var(--primary-color);
+}
+
 /* Under Construction */
 .under-construction {
     width: 100%;

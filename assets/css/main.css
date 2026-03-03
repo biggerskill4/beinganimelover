@@ -604,6 +604,7 @@ header .header-btn {
     gap: 20px;
     justify-content: flex-start;
     align-items: flex-start;
+    color: #6b6b6b;
 }
 
 @media (max-width: 1024px) {
@@ -794,6 +795,10 @@ header .header-btn {
         color: var(--white-color);
         border: 1px solid var(--accent-color);
     }
+}
+
+.featured-anime .btn-row {
+    margin-top: 20px;
 }
 
 @media (max-width: 550px) {
