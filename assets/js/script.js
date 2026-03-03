@@ -28,7 +28,7 @@ animeToShow.characters.forEach(char => {
   slide.classList.add("swiper-slide");
   // Use template literal for inner HTML
   slide.innerHTML = `
-    <h2 class="hero-title">${animeToShow.animeName}</h2>
+    <h2 class="hero-title">${animeToShow.animeName}</h2 >
     <img class="character" src="${char.characterImage}" alt="${char.characterName}">
     <span class="char-name">${char.characterName}</span>
     <div class="hero-cards">
