@@ -94,6 +94,7 @@ header .header-btn {
     height: 100vh;
     position: relative;
     overflow: hidden;
+    z-index: 0;
 }
 
 .hero::before {
@@ -176,7 +177,7 @@ header .header-btn {
     transform: translate(-50%, -120%);
     opacity: 0;
     transition: opacity 0.2s ease;
-    z-index: 9999;
+    z-index: 1;
 }
 
 .hero .hero-title {
@@ -604,7 +605,13 @@ header .header-btn {
     gap: 20px;
     justify-content: flex-start;
     align-items: flex-start;
+    
+}
+.about-section .about-content p {
     color: #6b6b6b;
+    display: inline-block;
+    transition: color 0.3s ease;
+    font-size: 20px;
 }
 
 @media (max-width: 1024px) {

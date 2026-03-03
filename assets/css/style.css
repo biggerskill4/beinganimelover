@@ -149,6 +149,9 @@ a {
     flex-direction: column;
     gap: 20px;
 }
+section {
+    background: var(--bg-color);
+}
 
 /* scroll bar */
 /* width */

@@ -251,11 +251,49 @@ swiper.on("slideChangeTransitionStart", () => {
   activeSlide.style.opacity = '1';
   animateSlide(activeSlide); // animate only active
 });
+
+gsap.to(".hero .myHeroSwiper", {
+  scale: 0.85,
+  transformOrigin: "center center",
+  scrollTrigger: {
+    trigger: ".hero",
+    start: "top top",
+    end: "bottom top",
+    scrub: 0.3,
+  }
+});
+
 // =========================
 // End Hero Slider
 // =========================
 
 
+// =========================
+// Character Spotlight
+// =========================
+
+// Animate all character cards
+gsap.utils.toArray(".character-card").forEach((card, i) => {
+  gsap.from(card, {
+    y: 80,
+    opacity: 0,
+    duration: 1,
+    ease: "power3.out",
+    scrollTrigger: {
+      trigger: card,
+      start: "top 90%",
+      end: "bottom 60%",
+    }
+  });
+});
+// =========================
+// End Character Spotlight
+// =========================
+
+
+// =========================
+// About Section
+// =========================
 gsap.utils.toArray(".split-text").forEach((text) => {
 
   function splitLetters(element) {
@@ -296,6 +334,10 @@ gsap.utils.toArray(".split-text").forEach((text) => {
   });
 
 });
+// =========================
+// End About Section
+// =========================
+
 
 // =========================
 // Featured Anime
