@@ -452,6 +452,8 @@ header .header-btn {
 .character-spotlight {
     width: 100%;
     padding: 15px 30px;
+    will-change: transform;
+    position: relative;
 }
 
 .character-spotlight .section-spacing {
@@ -463,6 +465,7 @@ header .header-btn {
 
 .character-spotlight .container {
     width: var(--max-width);
+    height: 80vh;
     gap: 40px;
 }
 
@@ -557,15 +560,16 @@ header .header-btn {
 
     .character-spotlight .container {
         gap: 30px;
+        height: auto;
     }
 
     .character-spotlight .cards-grid {
-        grid-template-columns: repeat(1, 1fr);
+        grid-template-columns: repeat(2, 1fr);
         gap: 20px;
     }
 
     .character-spotlight .character-card .char-img {
-        height: 350px;
+        height: 200px;
     }
 
     .character-spotlight .character-card h3 {
@@ -715,7 +719,7 @@ header .header-btn {
   Featured Anime
 ==================== */
 .featured-anime {
-    padding: 60px 15px 80px;
+    padding: 80px 15px 40px;
     width: 100%;
 }
 
@@ -918,6 +922,9 @@ footer .social-icons {
 }
 
 @media (max-width: 550px) {
+    footer {
+        padding-top: 30px;
+    }
     footer .footer-col h3 {
         font-size: 24px;
         letter-spacing: 1px;
