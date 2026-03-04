@@ -14,7 +14,7 @@ const animeHeroList = [
       },
       {
         characterName: "Mikasa Ackerman",
-        characterImage: "./assets/images/anime-character/aot/mikasa.webp",
+        characterImage: "./assets/images/anime-character/aot/mikasa_ackerman.webp",
         bgImage: "./assets/images/hero/attack_on_titan_bg.jpg",
         cards: [
           { title: "Elite Fighter", description: "One of humanity’s strongest soldiers." },

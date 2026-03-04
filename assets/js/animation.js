@@ -252,6 +252,7 @@ swiper.on("slideChangeTransitionStart", () => {
   animateSlide(activeSlide); // animate only active
 });
 
+
 gsap.to(".hero .myHeroSwiper", {
   scale: 0.85,
   transformOrigin: "center center",
@@ -272,20 +273,31 @@ gsap.to(".hero .myHeroSwiper", {
 // Character Spotlight
 // =========================
 
-// Animate all character cards
-gsap.utils.toArray(".character-card").forEach((card, i) => {
-  gsap.from(card, {
-    y: 80,
-    opacity: 0,
-    duration: 1,
-    ease: "power3.out",
-    scrollTrigger: {
-      trigger: card,
-      start: "top 90%",
-      end: "bottom 60%",
-    }
-  });
+gsap.to(".character-spotlight", {
+  scale: 0.8,
+  rotate: 5,
+  ease: "power1.out",
+  scrollTrigger: {
+    trigger: ".character-spotlight",
+    start: "top top",
+    end: "+=50%",
+    scrub: 1,
+    pin: true
+  }
 });
+
+// gsap.from(".character-card", {
+//   y: 80,
+//   opacity: 0,
+//   duration: 1,
+//   ease: "power3.out",
+//   scrollTrigger: {
+//     trigger: ".cards-grid", 
+//     start: "top 80%",
+//     end: "bottom 60%",
+//     toggleActions: "play none none reverse"
+//   }
+// });
 // =========================
 // End Character Spotlight
 // =========================
@@ -294,6 +306,7 @@ gsap.utils.toArray(".character-card").forEach((card, i) => {
 // =========================
 // About Section
 // =========================
+
 gsap.utils.toArray(".split-text").forEach((text) => {
 
   function splitLetters(element) {
@@ -351,9 +364,31 @@ gsap.from(".anime-card", {
   scrollTrigger: {
     trigger: ".featured-anime",
     start: "top 75%",
+    toggleActions: "play none none reverse"
   }
 });
 // =========================
 // End Featured Anime
 // =========================
 
+// Responsive Gsap
+ScrollTrigger.matchMedia({
+
+  "(max-width: 767px)": function () {
+    document.querySelector(".myHeroSwiper").removeAttribute("data-speed");
+
+    gsap.to(".character-spotlight", {
+      scale: 0.9, 
+      rotate: 2,   
+      ease: "power1.out",
+      scrollTrigger: {
+        trigger: ".character-spotlight",
+        start: "top top",
+        end: "+=50%",
+        scrub: 1,
+        pin: false  
+      }
+    });
+  }
+
+});
