@@ -7,7 +7,7 @@ const animeHeroList = [
         characterImage: "./assets/images/anime-character/aot/eren_yeager.webp",
         bgImage: "./assets/images/hero/attack_on_titan_bg.jpg",
         cards: [
-          { title: "Power of Titans", description: "Eren possesses the ability to transform into a Titan." },
+          { title: "Eren Yeager", description: "Eren possesses the ability to transform into a Titan." },
           { title: "Survey Corps", description: "Fights alongside the Survey Corps to protect humanity." },
           { title: "Determined Hero", description: "Driven by revenge and a strong sense of justice." }
         ]
@@ -17,7 +17,7 @@ const animeHeroList = [
         characterImage: "./assets/images/anime-character/aot/mikasa_ackerman.webp",
         bgImage: "./assets/images/hero/attack_on_titan_bg.jpg",
         cards: [
-          { title: "Elite Fighter", description: "One of humanity’s strongest soldiers." },
+          { title: "Mikasa Ackerman", description: "One of humanity’s strongest soldiers." },
           { title: "Loyal Protector", description: "Protects Eren at all costs." },
           { title: "Skilled & Fast", description: "Exceptional agility and combat skill." }
         ]
@@ -32,7 +32,7 @@ const animeHeroList = [
         characterImage: "./assets/images/anime-character/demon-slayer/tanjiro.webp",
         bgImage: "./assets/images/hero/demon_slayer_bg.jpg",
         cards: [
-          { title: "Water Breathing", description: "Master of the Water Breathing sword technique." },
+          { title: "Tanjiro Kamado", description: "Master of the Water Breathing sword technique." },
           { title: "Protective Brother", description: "Seeks to save his sister from demon transformation." },
           { title: "Determined Fighter", description: "Never gives up despite tough battles." }
         ]
@@ -42,7 +42,7 @@ const animeHeroList = [
         characterImage: "./assets/images/anime-character/demon-slayer/nezuko.webp",
         bgImage: "./assets/images/hero/demon_slayer_bg.jpg",
         cards: [
-          { title: "Demon Powers", description: "Transforms into a demon but retains human emotions." },
+          { title: "Nezuko Kamado", description: "Transforms into a demon but retains human emotions." },
           { title: "Protective Sister", description: "Protects Tanjiro and fights demons." },
           { title: "Strong & Agile", description: "Enhanced speed and strength." }
         ]
@@ -52,7 +52,7 @@ const animeHeroList = [
         characterImage: "./assets/images/anime-character/demon-slayer/nezuko.webp",
         bgImage: "./assets/images/hero/demon_slayer_bg.jpg",
         cards: [
-          { title: "Demon Powers", description: "Transforms into a demon but retains human emotions." },
+          { title: "Nezuko Kamado", description: "Transforms into a demon but retains human emotions." },
           { title: "Protective Sister", description: "Protects Tanjiro and fights demons." },
           { title: "Strong & Agile", description: "Enhanced speed and strength." }
         ]
@@ -67,7 +67,7 @@ const animeHeroList = [
         characterImage: "./assets/images/anime-character/mha/deku.png",
         bgImage: "./assets/images/hero/mha_bg.jpg",
         cards: [
-          { title: "One For All", description: "Inherits the powerful quirk 'One For All'." },
+          { title: "Izuku Midoriya", description: "Inherits the powerful quirk 'One For All'." },
           { title: "Aspiring Hero", description: "Dreams of becoming the number one hero." },
           { title: "Brave & Kind", description: "Always helps others even at his own risk." }
         ]
@@ -77,7 +77,7 @@ const animeHeroList = [
         characterImage: "./assets/images/anime-character/mha/bakugo.png",
         bgImage: "./assets/images/hero/mha_bg.jpg",
         cards: [
-          { title: "Explosion Quirk", description: "Can create explosions from his hands." },
+          { title: "Katsuki Bakugo", description: "Can create explosions from his hands." },
           { title: "Competitive Spirit", description: "Strives to be the best hero." },
           { title: "Strong & Determined", description: "Never backs down from a challenge." }
         ]

@@ -115,7 +115,7 @@ gsap.to(".parallax-img", {
   ease: "none",
   scrollTrigger: {
     trigger: ".parallax-section",
-    start: "top bottom",
+    start: "top top",
     end: "bottom top",
     scrub: true
   }
@@ -161,11 +161,12 @@ navLinks.forEach(link => {
 
 
 // =========================
-// Hero Image
+// Hero
 // =========================
 const heroSection = document.querySelector('.hero');
 const heroImg = document.querySelectorAll('.hero img.character');
 const heroBgImg = document.querySelector('.hero img.hero-bg-img');
+const heroCharName = document.querySelector('.hero .char-name');
 
 
 heroSection.addEventListener('mousemove', (e) => {
@@ -187,14 +188,8 @@ heroSection.addEventListener('mousemove', (e) => {
     ease: "power2.out"
   });
 });
-// =========================
-// End Hero Image
-// =========================
 
-
-// =========================
-// Hero Slider
-// =========================
+// Slider
 const swiper = new Swiper(".myHeroSwiper", {
   loop: true,
   pagination: {
@@ -265,7 +260,7 @@ gsap.to(".hero .myHeroSwiper", {
 });
 
 // =========================
-// End Hero Slider
+// End Hero
 // =========================
 
 
@@ -273,7 +268,7 @@ gsap.to(".hero .myHeroSwiper", {
 // Character Spotlight
 // =========================
 
-gsap.to(".character-spotlight", {
+gsap.to(".character-spotlight .section-spacing", {
   scale: 0.8,
   rotate: 5,
   ease: "power1.out",
