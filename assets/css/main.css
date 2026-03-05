@@ -167,18 +167,20 @@ header .header-btn {
     width: var(--max-width);
 }
 
-.char-name {
-    position: fixed;
+/* .char-name {
+    font-family: var(--heading-font);
+    font-size: 30px;
+    font-weight: 500;
+    box-shadow: 0 0 10px #36363694;
     pointer-events: none;
-    padding: 6px 14px;
-    background: var(--bg-color);
-    color: #fff;
+    padding: 6px 20px;
+    background: var(--white-color);
+    color: var(--black-color);
     border-radius: 20px;
-    transform: translate(-50%, -120%);
-    opacity: 0;
+    opacity: 1;
     transition: opacity 0.2s ease;
     z-index: 1;
-}
+} */
 
 .hero .hero-title {
     font-size: 12vw;
@@ -602,7 +604,7 @@ header .header-btn {
 }
 
 .about-section .about-title h2 {
-    font-size: 60px;
+    font-size: 80px;
 }
 
 .about-section .about-content {
@@ -615,7 +617,7 @@ header .header-btn {
     color: #6b6b6b;
     display: inline-block;
     transition: color 0.3s ease;
-    font-size: 20px;
+    font-size: 22px;
 }
 
 @media (max-width: 1024px) {
@@ -666,13 +668,14 @@ header .header-btn {
 .parallax-section {
     width: 100%;
     padding: 60px 15px 30px;
+    overflow: hidden;
 }
 
 .parallax-section .container {
     width: var(--max-width);
     position: relative;
     border-radius: 50px;
-    overflow: hidden;
+    overflow: hidden !important;
     background: #FFF;
     height: 750px;
 }
