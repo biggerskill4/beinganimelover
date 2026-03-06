@@ -3,11 +3,11 @@ const animeHeroList = [
     animeName: "Attack on Titan",
     characters: [
       {
-        characterName: "Eren Yeager",
-        characterImage: "./assets/images/anime-character/aot/eren_yeager.webp",
+        characterName: "Eren Jeager",
+        characterImage: "./assets/images/anime-character/aot/eren_jeager.webp",
         bgImage: "./assets/images/hero/attack_on_titan_bg.jpg",
         cards: [
-          { title: "Eren Yeager", description: "Holder of the Attack Titan." },
+          { title: "Eren Jeager", description: "Holder of the Attack Titan." },
           { title: "Freedom Fighter", description: "Driven to destroy all Titans." },
           { title: "Determined", description: "Never stops fighting for freedom." }
         ]
@@ -24,7 +24,7 @@ const animeHeroList = [
       },
       {
         characterName: "Levi Ackerman",
-        characterImage: "./assets/images/anime-character/aot/levi.webp",
+        characterImage: "./assets/images/anime-character/aot/levi_ackerman.webp",
         bgImage: "./assets/images/hero/attack_on_titan_bg.jpg",
         cards: [
           { title: "Captain Levi", description: "Leader of the Special Operations Squad." },
