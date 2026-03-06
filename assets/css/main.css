@@ -166,21 +166,20 @@ header .header-btn {
 .hero .container {
     width: var(--max-width);
 }
+.title-charname {
+    width: fit-content;
+}
 
-/* .char-name {
+.char-name {
     font-family: var(--heading-font);
-    font-size: 30px;
+    font-size: 35px;
     font-weight: 500;
-    box-shadow: 0 0 10px #36363694;
-    pointer-events: none;
-    padding: 6px 20px;
-    background: var(--white-color);
-    color: var(--black-color);
+    letter-spacing: 1px;
+    color: var(--white-color);
     border-radius: 20px;
     opacity: 1;
     transition: opacity 0.2s ease;
-    z-index: 1;
-} */
+}
 
 .hero .hero-title {
     font-size: 12vw;
@@ -545,14 +544,23 @@ header .header-btn {
 }
 
 @media (max-width: 1024px) {
+    .character-spotlight .container {
+        height: fit-content;
+    }
     .character-spotlight .cards-grid {
         grid-template-columns: repeat(2, 1fr);
     }
 }
 
+@media (max-width: 768px) {
+    .character-spotlight {
+        padding: 30px 5px;
+    }
+}
+
 @media (max-width: 550px) {
     .character-spotlight {
-        padding: 10px 10px;
+        padding: 10px 5px;
     }
 
     .character-spotlight .section-spacing {
@@ -571,7 +579,7 @@ header .header-btn {
     }
 
     .character-spotlight .character-card .char-img {
-        height: 200px;
+        height: 300px;
     }
 
     .character-spotlight .character-card h3 {
