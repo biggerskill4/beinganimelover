@@ -21,6 +21,7 @@ const heroSlider = document.getElementById("hero-slider");
 
 // Find the anime object
 const animeToShow = animeHeroList.find(a => a.animeName === triggerAnime);
+// const animeToShow = animeHeroList.find(a => a.animeName === "Demon Slayer");
 
 // Create slides for each character
 animeToShow.characters.forEach(char => {
@@ -41,7 +42,7 @@ animeToShow.characters.forEach(char => {
         </div>
       `).join('')}
       <div class="card">
-        <h3>DANGER</h3>
+        <h3>Beinganimelover</h3>
         <img src="./assets/images/danger.webp" alt="Danger">
       </div>
     </div>
