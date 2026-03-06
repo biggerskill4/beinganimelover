@@ -204,27 +204,34 @@ const swiper = new Swiper(".myHeroSwiper", {
 });
 
 function resetSlide(slide) {
-  gsap.set(slide.querySelector(".hero-title"), { opacity: 0, y: -50 });
-  gsap.set(slide.querySelector(".character"), { opacity: 0, scale: 0.8 });
-  gsap.set(slide.querySelectorAll(".hero-cards .card"), { opacity: 0, y: 30 });
+  gsap.set(slide.querySelector(".hero .char-name"), { opacity: 0, y: -50 });
+  gsap.set(slide.querySelector(".hero .hero-title"), { opacity: 0, y: -50 });
+  gsap.set(slide.querySelector(".hero .character"), { opacity: 0, scale: 0.8 });
+  gsap.set(slide.querySelectorAll(".hero .hero-cards .card"), { opacity: 0, y: 30 });
 }
 
 function animateSlide(slide) {
-  gsap.to(slide.querySelector(".hero-title"), {
+  gsap.to(slide.querySelector(".hero .char-name"), {
+    opacity: 1,
+    y: 0,
+    duration: 1,
+    ease: "power3.out",
+  });
+   gsap.to(slide.querySelector(".hero .hero-title"), {
     opacity: 1,
     y: 0,
     duration: 1,
     ease: "power3.out",
   });
 
-  gsap.to(slide.querySelector(".character"), {
+  gsap.to(slide.querySelector(".hero .character"), {
     opacity: 1,
     scale: 1,
     duration: 1.2,
     ease: "power3.out",
   });
 
-  gsap.to(slide.querySelectorAll(".hero-cards .card"), {
+  gsap.to(slide.querySelectorAll(".hero .hero-cards .card"), {
     opacity: 1,
     y: 0,
     duration: 0.8,
@@ -234,15 +241,15 @@ function animateSlide(slide) {
 }
 
 // Animate first slide
-const slides = document.querySelectorAll(".swiper-slide");
+const slides = document.querySelectorAll(".hero .swiper-slide");
 slides.forEach(slide => resetSlide(slide));
-animateSlide(document.querySelector(".swiper-slide-active"));
+animateSlide(document.querySelector(".hero .swiper-slide-active"));
 
 // Animate on slide change
 swiper.on("slideChangeTransitionStart", () => {
   slides.forEach(slide => resetSlide(slide));
   slides.forEach(slide => slide.style.opacity = '0');
-  const activeSlide = document.querySelector(".swiper-slide-active");
+  const activeSlide = document.querySelector(".hero .swiper-slide-active");
   activeSlide.style.opacity = '1';
   animateSlide(activeSlide); // animate only active
 });
@@ -268,31 +275,25 @@ gsap.to(".hero .myHeroSwiper", {
 // Character Spotlight
 // =========================
 
-gsap.to(".character-spotlight .section-spacing", {
-  scale: 0.8,
-  rotate: 5,
-  ease: "power1.out",
-  scrollTrigger: {
-    trigger: ".character-spotlight",
-    start: "top top",
-    end: "+=50%",
-    scrub: 1,
-    pin: true
-  }
+const mm = gsap.matchMedia();
+
+mm.add("(min-width: 768px)", () => {
+
+  gsap.to(".character-spotlight .section-spacing", {
+    scale: 0.8,
+    rotate: 5,
+    ease: "power1.out",
+    scrollTrigger: {
+      trigger: ".character-spotlight",
+      start: "top top",
+      end: "+=50%",
+      scrub: 1,
+      pin: true
+    }
+  });
+
 });
 
-// gsap.from(".character-card", {
-//   y: 80,
-//   opacity: 0,
-//   duration: 1,
-//   ease: "power3.out",
-//   scrollTrigger: {
-//     trigger: ".cards-grid", 
-//     start: "top 80%",
-//     end: "bottom 60%",
-//     toggleActions: "play none none reverse"
-//   }
-// });
 // =========================
 // End Character Spotlight
 // =========================
@@ -371,19 +372,5 @@ ScrollTrigger.matchMedia({
 
   "(max-width: 767px)": function () {
     document.querySelector(".myHeroSwiper").removeAttribute("data-speed");
-
-    gsap.to(".character-spotlight", {
-      scale: 0.9, 
-      rotate: 2,   
-      ease: "power1.out",
-      scrollTrigger: {
-        trigger: ".character-spotlight",
-        start: "top top",
-        end: "+=50%",
-        scrub: 1,
-        pin: false  
-      }
-    });
   }
-
 });
