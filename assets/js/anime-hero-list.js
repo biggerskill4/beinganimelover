@@ -23,16 +23,6 @@ const animeHeroList = [
         ]
       },
       {
-        characterName: "Levi Ackerman",
-        characterImage: "./assets/images/anime-character/aot/levi_ackerman.webp",
-        bgImage: "./assets/images/hero/attack_on_titan_bg.jpg",
-        cards: [
-          { title: "Captain Levi", description: "Leader of the Special Operations Squad." },
-          { title: "Humanity’s Strongest", description: "Unmatched combat abilities." },
-          { title: "Calm & Ruthless", description: "Efficient titan slayer." }
-        ]
-      },
-      {
         characterName: "Armin Arlert",
         characterImage: "./assets/images/anime-character/aot/armin.webp",
         bgImage: "./assets/images/hero/attack_on_titan_bg.jpg",
@@ -40,6 +30,16 @@ const animeHeroList = [
           { title: "Strategist", description: "Brilliant tactical mind." },
           { title: "Colossal Titan", description: "Inherited the Colossal Titan." },
           { title: "Kind Heart", description: "Believes in peace and understanding." }
+        ]
+      },
+      {
+        characterName: "Levi Ackerman",
+        characterImage: "./assets/images/anime-character/aot/levi_ackerman.webp",
+        bgImage: "./assets/images/hero/attack_on_titan_bg.jpg",
+        cards: [
+          { title: "Captain Levi", description: "Leader of the Special Operations Squad." },
+          { title: "Humanity’s Strongest", description: "Unmatched combat abilities." },
+          { title: "Calm & Ruthless", description: "Efficient titan slayer." }
         ]
       },
       {
