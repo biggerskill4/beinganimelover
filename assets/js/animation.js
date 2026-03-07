@@ -203,6 +203,8 @@ const swiper = new Swiper(".myHeroSwiper", {
   effect: "fade",
 });
 
+swiper.autoplay.stop(); // wait for preloader to finish
+
 function resetSlide(slide) {
   gsap.set(slide.querySelector(".hero .char-name"), { opacity: 0, y: -50 });
   gsap.set(slide.querySelector(".hero .hero-title"), { opacity: 0, y: -50 });
@@ -240,10 +242,32 @@ function animateSlide(slide) {
   });
 }
 
-// Animate first slide
+// Animate first slide — waits for preloader to finish
 const slides = document.querySelectorAll(".hero .swiper-slide");
 slides.forEach(slide => resetSlide(slide));
-animateSlide(document.querySelector(".hero .swiper-slide-active"));
+
+function startHeroSlider() {
+  animateSlide(document.querySelector(".hero .swiper-slide-active"));
+
+  // Start autoplay after first slide finishes animating
+  setTimeout(() => {
+    swiper.autoplay.start();
+  }, 1200);
+}
+
+if (document.body.classList.contains("page-ready")) {
+  // Preloader already done (e.g. cached page)
+  startHeroSlider();
+} else {
+  // Watch for page-ready class added by preloader
+  const observer = new MutationObserver(() => {
+    if (document.body.classList.contains("page-ready")) {
+      observer.disconnect();
+      startHeroSlider();
+    }
+  });
+  observer.observe(document.body, { attributes: true, attributeFilter: ["class"] });
+}
 
 // Animate on slide change
 swiper.on("slideChangeTransitionStart", () => {
@@ -275,23 +299,47 @@ gsap.to(".hero .myHeroSwiper", {
 // Character Spotlight
 // =========================
 
-const mm = gsap.matchMedia();
-
-mm.add("(min-width: 768px)", () => {
-
-  gsap.to(".character-spotlight .section-spacing", {
-    scale: 0.8,
-    rotate: 5,
-    ease: "power1.out",
-    scrollTrigger: {
-      trigger: ".character-spotlight",
-      start: "top top",
-      end: "+=50%",
-      scrub: 1,
-      pin: true
-    }
+// Spotlight cursor glow effect
+document.querySelectorAll(".cs-card").forEach(card => {
+  card.addEventListener("mousemove", (e) => {
+    const rect = card.getBoundingClientRect();
+    const x = ((e.clientX - rect.left) / rect.width) * 100;
+    const y = ((e.clientY - rect.top) / rect.height) * 100;
+    card.style.setProperty("--mx", x + "%");
+    card.style.setProperty("--my", y + "%");
   });
+});
 
+// Swiper — smooth free drag with momentum
+const csSwiper = new Swiper(".csSwiper", {
+  slidesPerView: "auto",
+  spaceBetween: 20,
+  grabCursor: true,
+  freeMode: {
+    enabled: true,
+    momentum: true,
+    momentumRatio: 0.8,
+    momentumVelocityRatio: 0.8,
+    momentumBounce: false,
+  },
+  scrollbar: {
+    el: ".swiper-scrollbar",
+    draggable: true
+  },
+});
+
+// GSAP entrance — cards slide in on scroll
+gsap.from(".cs-card", {
+  x: 80,
+  opacity: 0,
+  duration: 0.8,
+  stagger: 0.12,
+  ease: "power3.out",
+  scrollTrigger: {
+    trigger: ".character-spotlight",
+    start: "top 75%",
+    toggleActions: "play none none none"
+  }
 });
 
 // =========================
@@ -374,3 +422,44 @@ ScrollTrigger.matchMedia({
     document.querySelector(".myHeroSwiper").removeAttribute("data-speed");
   }
 });
+
+// =========================
+// Mobile Menu
+// =========================
+const hamburger  = document.getElementById("hamburger");
+const mobileNav  = document.getElementById("mobileNav");
+const mobileLinks = document.querySelectorAll(".mobile-nav ul li a");
+
+hamburger.addEventListener("click", () => {
+  const isOpen = mobileNav.classList.toggle("open");
+  hamburger.classList.toggle("open", isOpen);
+  document.body.style.overflow = isOpen ? "hidden" : "";
+});
+
+// Close on link click
+mobileLinks.forEach(link => {
+  link.addEventListener("click", () => {
+    mobileNav.classList.remove("open");
+    hamburger.classList.remove("open");
+    document.body.style.overflow = "";
+  });
+});
+
+// GSAP stagger animate links when menu opens
+const observer = new MutationObserver(() => {
+  if (mobileNav.classList.contains("open")) {
+    gsap.fromTo(".mobile-nav ul li",
+      { y: 40, opacity: 0 },
+      { y: 0, opacity: 1, duration: 0.5, stagger: 0.08, ease: "power3.out", delay: 0.2 }
+    );
+    gsap.fromTo(".mobile-nav-footer",
+      { y: 20, opacity: 0 },
+      { y: 0, opacity: 1, duration: 0.4, ease: "power2.out", delay: 0.6 }
+    );
+  }
+});
+observer.observe(mobileNav, { attributes: true, attributeFilter: ["class"] });
+// =========================
+// End Mobile Menu
+// =========================
+

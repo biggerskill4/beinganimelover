@@ -1,0 +1,151 @@
+/* ================================
+   BEINGANIMELOVER — GSAP Preloader
+   ================================ */
+
+#preloader {
+  position: fixed;
+  inset: 0;
+  z-index: 99999;
+  background: var(--bg-color);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  pointer-events: all;
+}
+
+/* ── Animated BG grid lines ── */
+#preloader .pl-grid {
+  position: absolute;
+  inset: 0;
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+  pointer-events: none;
+  opacity: 0.06;
+}
+
+#preloader .pl-grid span {
+  border-right: 1px solid #fff;
+  height: 100%;
+}
+
+/* ── Top & Bottom wipe panels ── */
+#preloader .pl-panel {
+  position: absolute;
+  left: 0;
+  right: 0;
+  height: 50%;
+  background: var(--primary-color);
+  z-index: 1;
+  transform: scaleY(0);
+}
+
+#preloader .pl-panel.top    { top: 0;    transform-origin: top; }
+#preloader .pl-panel.bottom { bottom: 0; transform-origin: bottom; }
+
+/* ── Logo mark ── */
+.pl-logo-wrap {
+  position: relative;
+  z-index: 2;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 6px;
+  margin-bottom: 48px;
+}
+
+.pl-logo-wrap img {
+  width: 200px;
+  opacity: 0;
+  /* filter: brightness(0) invert(1); */
+}
+
+.pl-logo-tagline {
+  font-family: var(--text-font);
+  font-size: 11px;
+  letter-spacing: 6px;
+  text-transform: uppercase;
+  color: var(--primary-color);
+  opacity: 0;
+}
+
+/* ── Giant counter ── */
+.pl-counter-wrap {
+  position: relative;
+  z-index: 2;
+  display: flex;
+  align-items: flex-end;
+  gap: 4px;
+  line-height: 1;
+  margin-bottom: 32px;
+}
+
+#pl-counter {
+  font-family: var(--heading-font);
+  font-size: clamp(100px, 18vw, 200px);
+  color: var(--text-color);
+  letter-spacing: -4px;
+  display: block;
+  will-change: transform, opacity;
+  opacity: 0;
+}
+
+.pl-counter-pct {
+  font-family: var(--heading-font);
+  font-size: clamp(28px, 4vw, 52px);
+  color: var(--primary-color);
+  padding-bottom: 18px;
+  opacity: 0;
+}
+
+/* ── Progress track ── */
+.pl-progress-track {
+  position: relative;
+  z-index: 2;
+  width: clamp(260px, 38vw, 520px);
+  height: 2px;
+  background: rgba(255, 255, 255, 0.1);
+  overflow: hidden;
+  margin-bottom: 20px;
+}
+
+#pl-bar {
+  height: 100%;
+  width: 0%;
+  background: linear-gradient(90deg, var(--primary-color), #fff 80%);
+  transform-origin: left;
+  will-change: width;
+  box-shadow: 0 0 12px var(--primary-color);
+}
+
+/* ── Status text ── */
+#pl-status {
+  position: relative;
+  z-index: 2;
+  font-family: var(--text-font);
+  font-size: 11px;
+  letter-spacing: 4px;
+  text-transform: uppercase;
+  color: rgba(255, 255, 255, 0.35);
+  height: 16px;
+  overflow: hidden;
+  opacity: 0;
+}
+
+/* ── Floating kanji chars (decorative) ── */
+.pl-kanji {
+  position: absolute;
+  font-family: var(--heading-font);
+  color: rgba(248, 157, 162, 0.07);
+  pointer-events: none;
+  z-index: 0;
+  user-select: none;
+  will-change: transform, opacity;
+}
+
+.pl-kanji:nth-child(1) { font-size: 220px; top: -40px;  left: -30px; }
+.pl-kanji:nth-child(2) { font-size: 160px; bottom: -20px; right: -10px; }
+.pl-kanji:nth-child(3) { font-size: 120px; top: 40%;  right: 8%; }
+
+/* preloader slides up as a whole — no exit panels needed */
