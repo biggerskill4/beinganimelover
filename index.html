@@ -81,6 +81,9 @@
 
             <!-- Mobile Nav -->
             <div class="mobile-nav" id="mobileNav">
+                <button class="mobile-nav-close" id="mobileNavClose" aria-label="Close menu">
+                    <ion-icon name="close-outline"></ion-icon>
+                </button>
                 <ul>
                     <li><a href="#" class="active">Home<span>01</span></a></li>
                     <li><a href="#">Anime<span>02</span></a></li>
@@ -155,24 +158,46 @@
                 <div class="container flex-col">
                     <h2 class="gsap-fade-up">Latest Videos</h2>
                     <div class="video-grid">
-                        <div class="video-card"><iframe src="https://www.youtube.com/embed/uF4Mboa-k9U"
-                                title="YouTube video" frameborder="0" loading="lazy" allowfullscreen></iframe></div>
-                        <div class="video-card"><iframe src="https://www.youtube.com/embed/buzoQ5ruYEQ"
-                                title="YouTube video" frameborder="0" loading="lazy" allowfullscreen></iframe></div>
-                        <div class="video-card"><iframe src="https://www.youtube.com/embed/1BM0ljFm6f8"
-                                title="YouTube video" frameborder="0" loading="lazy" allowfullscreen></iframe></div>
-                        <div class="video-card"><iframe src="https://www.youtube.com/embed/IBWNZt5jLIk"
-                                title="YouTube video" frameborder="0" loading="lazy" allowfullscreen></iframe></div>
-                        <div class="video-card"><iframe src="https://www.youtube.com/embed/qnmZ7tB8Do4"
-                                title="YouTube video" frameborder="0" loading="lazy" allowfullscreen></iframe></div>
+
+                        <div class="video-card" data-id="uF4Mboa-k9U">
+                            <img class="video-thumb" src="https://img.youtube.com/vi/uF4Mboa-k9U/maxresdefault.jpg"
+                                alt="Anime Edit" loading="lazy">
+                            <div class="video-play-btn"><span><ion-icon name="play"></ion-icon></span></div>
+                            <iframe title="YouTube video" frameborder="0" allowfullscreen></iframe>
+                        </div>
+
+                        <div class="video-card" data-id="buzoQ5ruYEQ">
+                            <img class="video-thumb" src="https://img.youtube.com/vi/buzoQ5ruYEQ/maxresdefault.jpg"
+                                alt="Anime Edit" loading="lazy">
+                            <div class="video-play-btn"><span><ion-icon name="play"></ion-icon></span></div>
+                            <iframe title="YouTube video" frameborder="0" allowfullscreen></iframe>
+                        </div>
+
+                        <div class="video-card" data-id="1BM0ljFm6f8">
+                            <img class="video-thumb" src="https://img.youtube.com/vi/1BM0ljFm6f8/maxresdefault.jpg"
+                                alt="Anime Edit" loading="lazy">
+                            <div class="video-play-btn"><span><ion-icon name="play"></ion-icon></span></div>
+                            <iframe title="YouTube video" frameborder="0" allowfullscreen></iframe>
+                        </div>
+
+                        <div class="video-card" data-id="IBWNZt5jLIk">
+                            <img class="video-thumb" src="https://img.youtube.com/vi/IBWNZt5jLIk/maxresdefault.jpg"
+                                alt="Anime Edit" loading="lazy">
+                            <div class="video-play-btn"><span><ion-icon name="play"></ion-icon></span></div>
+                            <iframe title="YouTube video" frameborder="0" allowfullscreen></iframe>
+                        </div>
+
+                        <div class="video-card" data-id="qnmZ7tB8Do4">
+                            <img class="video-thumb" src="https://img.youtube.com/vi/qnmZ7tB8Do4/maxresdefault.jpg"
+                                alt="Anime Edit" loading="lazy">
+                            <div class="video-play-btn"><span><ion-icon name="play"></ion-icon></span></div>
+                            <iframe title="YouTube video" frameborder="0" allowfullscreen></iframe>
+                        </div>
+
                     </div>
-                    <a href="https://www.youtube.com/@beinganimelover4/shorts" class="cta flex" target="_blank"
-                        rel="noopener">
-                        <span class="cta-text flex">View Channel</span>
-                        <span class="flex"><ion-icon name="logo-youtube"></ion-icon></span>
-                    </a>
                 </div>
             </section>
+            <!-- End Latest Videos -->
 
 
             <!-- Character Spotlight -->
@@ -308,68 +333,90 @@
                     <h2 class="section-title gsap-fade-up">Featured Anime Series</h2>
                     <p class="section-subtitle gsap-fade-up">Explore iconic worlds &amp; legendary characters</p>
                     <div class="anime-grid">
+
                         <div class="anime-card">
                             <div class="anime-poster">
                                 <img src="./assets/images/anime-character/one-piece/one_piece_poster.webp"
                                     alt="One Piece" loading="lazy">
-                                <div class="anime-overlay">
-                                    <p>A legendary pirate adventure spanning seas, dreams, and unbreakable bonds.</p>
+                                <div class="anime-rating">9.2 ★</div>
+                                <div class="anime-info">
+                                    <div class="anime-tags">
+                                        <span class="anime-tag pink">Adventure</span>
+                                        <span class="anime-tag">Classic</span>
+                                    </div>
+                                    <h3>One Piece</h3>
                                     <div class="anime-buttons">
-                                        <a href="#" class="cta cta-white">Explore Characters</a>
-                                        <a href="#" class="cta cta-outline">Watch Edits</a>
+                                        <a href="#" class="cta cta-white">Explore</a>
+                                        <a href="#" class="cta cta-outline">Edits</a>
                                     </div>
                                 </div>
                             </div>
-                            <h3>One Piece</h3>
                         </div>
+
                         <div class="anime-card">
                             <div class="anime-poster">
                                 <img src="./assets/images/anime-character/demon-slayer/demon_slayer_poster.webp"
                                     alt="Demon Slayer" loading="lazy">
-                                <div class="anime-overlay">
-                                    <p>A breathtaking story of swords, demons, and emotional battles.</p>
+                                <div class="anime-rating">8.9 ★</div>
+                                <div class="anime-info">
+                                    <div class="anime-tags">
+                                        <span class="anime-tag pink">Action</span>
+                                        <span class="anime-tag">Supernatural</span>
+                                    </div>
+                                    <h3>Demon Slayer</h3>
                                     <div class="anime-buttons">
-                                        <a href="#" class="cta cta-white">Explore Characters</a>
-                                        <a href="#" class="cta cta-outline">Watch Edits</a>
+                                        <a href="#" class="cta cta-white">Explore</a>
+                                        <a href="#" class="cta cta-outline">Edits</a>
                                     </div>
                                 </div>
                             </div>
-                            <h3>Demon Slayer</h3>
                         </div>
+
                         <div class="anime-card">
                             <div class="anime-poster">
                                 <img src="./assets/images/anime-character/solo-leveling/solo_leveling_poster.webp"
                                     alt="Solo Leveling" loading="lazy">
-                                <div class="anime-overlay">
-                                    <p>From weakest hunter to shadow monarch — pure power evolution.</p>
+                                <div class="anime-rating">8.7 ★</div>
+                                <div class="anime-info">
+                                    <div class="anime-tags">
+                                        <span class="anime-tag pink">Action</span>
+                                        <span class="anime-tag">Power Fantasy</span>
+                                    </div>
+                                    <h3>Solo Leveling</h3>
                                     <div class="anime-buttons">
-                                        <a href="#" class="cta cta-white">Explore Characters</a>
-                                        <a href="#" class="cta cta-outline">Watch Edits</a>
+                                        <a href="#" class="cta cta-white">Explore</a>
+                                        <a href="#" class="cta cta-outline">Edits</a>
                                     </div>
                                 </div>
                             </div>
-                            <h3>Solo Leveling</h3>
                         </div>
+
                         <div class="anime-card">
                             <div class="anime-poster">
                                 <img src="./assets/images/anime-character/aot/aot_poster.webp" alt="Attack on Titan"
                                     loading="lazy">
-                                <div class="anime-overlay">
-                                    <p>Humanity's last stand against titans in a brutal dystopian world.</p>
+                                <div class="anime-rating">9.0 ★</div>
+                                <div class="anime-info">
+                                    <div class="anime-tags">
+                                        <span class="anime-tag pink">Action</span>
+                                        <span class="anime-tag">Dark Fantasy</span>
+                                    </div>
+                                    <h3>Attack on Titan</h3>
                                     <div class="anime-buttons">
-                                        <a href="#" class="cta cta-white">Explore Characters</a>
-                                        <a href="#" class="cta cta-outline">Watch Edits</a>
+                                        <a href="#" class="cta cta-white">Explore</a>
+                                        <a href="#" class="cta cta-outline">Edits</a>
                                     </div>
                                 </div>
                             </div>
-                            <h3>Attack on Titan</h3>
                         </div>
+
                     </div>
                     <div class="btn-row flex">
                         <a href="#" class="cta">View All Anime</a>
                     </div>
                 </div>
             </section>
+            <!-- End Featured Anime -->
 
 
             <!-- Top Views -->
@@ -377,60 +424,128 @@
                 <div class="container flex-col">
                     <h2 class="gsap-fade-up">Top Views</h2>
                     <div class="video-grid">
-                        <div class="video-card"><iframe src="https://www.youtube.com/embed/uF4Mboa-k9U"
-                                title="YouTube video" frameborder="0" loading="lazy" allowfullscreen></iframe></div>
-                        <div class="video-card"><iframe src="https://www.youtube.com/embed/buzoQ5ruYEQ"
-                                title="YouTube video" frameborder="0" loading="lazy" allowfullscreen></iframe></div>
-                        <div class="video-card"><iframe src="https://www.youtube.com/embed/1BM0ljFm6f8"
-                                title="YouTube video" frameborder="0" loading="lazy" allowfullscreen></iframe></div>
-                        <div class="video-card"><iframe src="https://www.youtube.com/embed/IBWNZt5jLIk"
-                                title="YouTube video" frameborder="0" loading="lazy" allowfullscreen></iframe></div>
-                        <div class="video-card"><iframe src="https://www.youtube.com/embed/qnmZ7tB8Do4"
-                                title="YouTube video" frameborder="0" loading="lazy" allowfullscreen></iframe></div>
+
+                        <div class="video-card" data-id="uF4Mboa-k9U">
+                            <img class="video-thumb" src="https://img.youtube.com/vi/uF4Mboa-k9U/maxresdefault.jpg"
+                                alt="Anime Edit" loading="lazy">
+                            <div class="video-play-btn"><span><ion-icon name="play"></ion-icon></span></div>
+                            <iframe title="YouTube video" frameborder="0" allowfullscreen></iframe>
+                        </div>
+
+                        <div class="video-card" data-id="buzoQ5ruYEQ">
+                            <img class="video-thumb" src="https://img.youtube.com/vi/buzoQ5ruYEQ/maxresdefault.jpg"
+                                alt="Anime Edit" loading="lazy">
+                            <div class="video-play-btn"><span><ion-icon name="play"></ion-icon></span></div>
+                            <iframe title="YouTube video" frameborder="0" allowfullscreen></iframe>
+                        </div>
+
+                        <div class="video-card" data-id="1BM0ljFm6f8">
+                            <img class="video-thumb" src="https://img.youtube.com/vi/1BM0ljFm6f8/maxresdefault.jpg"
+                                alt="Anime Edit" loading="lazy">
+                            <div class="video-play-btn"><span><ion-icon name="play"></ion-icon></span></div>
+                            <iframe title="YouTube video" frameborder="0" allowfullscreen></iframe>
+                        </div>
+
+                        <div class="video-card" data-id="IBWNZt5jLIk">
+                            <img class="video-thumb" src="https://img.youtube.com/vi/IBWNZt5jLIk/maxresdefault.jpg"
+                                alt="Anime Edit" loading="lazy">
+                            <div class="video-play-btn"><span><ion-icon name="play"></ion-icon></span></div>
+                            <iframe title="YouTube video" frameborder="0" allowfullscreen></iframe>
+                        </div>
+
+                        <div class="video-card" data-id="qnmZ7tB8Do4">
+                            <img class="video-thumb" src="https://img.youtube.com/vi/qnmZ7tB8Do4/maxresdefault.jpg"
+                                alt="Anime Edit" loading="lazy">
+                            <div class="video-play-btn"><span><ion-icon name="play"></ion-icon></span></div>
+                            <iframe title="YouTube video" frameborder="0" allowfullscreen></iframe>
+                        </div>
+
                     </div>
-                    <a href="https://www.youtube.com/@beinganimelover4/shorts" class="cta flex" target="_blank"
-                        rel="noopener">
-                        <span class="cta-text flex">Subscribe Now</span>
-                        <span class="flex"><ion-icon name="logo-youtube"></ion-icon></span>
-                    </a>
                 </div>
             </section>
+            <!-- End Top Views -->
 
 
-            <!-- Footer -->
             <footer class="site-footer flex-col">
-                <div class="container flex footer-container">
-                    <div class="footer-col">
-                        <h3>BeingAnimeLover</h3>
-                        <p>Your hub for anime edits, shorts, and character exploration. Dive into the worlds of your
-                            favorite anime with cinematic visuals and curated content.</p>
-                    </div>
-                    <div class="footer-col footer-links">
-                        <h4>Quick Links</h4>
-                        <ul>
-                            <li><a href="index.html">Home</a></li>
-                            <li><a href="#">Characters</a></li>
-                            <li><a href="#">Shorts</a></li>
-                            <li><a href="#">About</a></li>
-                        </ul>
-                        <div class="social-icons flex">
-                            <a href="https://www.youtube.com/@beinganimelover4" class="cta cta-circle" target="_blank"
-                                rel="noopener" aria-label="YouTube"><ion-icon name="logo-youtube"></ion-icon></a>
-                            <a href="https://www.instagram.com/beinganimelover" class="cta cta-circle" target="_blank"
-                                rel="noopener" aria-label="Instagram"><ion-icon name="logo-instagram"></ion-icon></a>
-                            <a href="https://www.facebook.com/beinganimelover4/" class="cta cta-circle" target="_blank"
-                                rel="noopener" aria-label="Facebook"><ion-icon name="logo-facebook"></ion-icon></a>
+                <div class="container flex">
+
+                    <!-- Top Row -->
+                    <div class="footer-top">
+
+                        <!-- Brand -->
+                        <div class="footer-brand">
+                            <img src="./assets/images/logo.svg" alt="Beinganimelover Logo">
+                            <p>Your hub for anime edits, shorts, and character exploration. Dive into the worlds of your
+                                favorite anime with cinematic visuals and curated content.</p>
                         </div>
+
+                        <!-- Nav -->
+                        <div class="footer-nav">
+                            <div class="footer-nav-col">
+                                <h5>Explore</h5>
+                                <ul>
+                                    <li><a href="index.html">Home</a></li>
+                                    <li><a href="#">Characters</a></li>
+                                    <li><a href="#">Anime Series</a></li>
+                                    <li><a href="#">Shorts</a></li>
+                                </ul>
+                            </div>
+                            <div class="footer-nav-col">
+                                <h5>Connect</h5>
+                                <ul>
+                                    <li><a href="#">About</a></li>
+                                    <li><a href="https://www.youtube.com/@beinganimelover4" target="_blank"
+                                            rel="noopener">YouTube</a></li>
+                                    <li><a href="https://www.instagram.com/beinganimelover" target="_blank"
+                                            rel="noopener">Instagram</a></li>
+                                    <li><a href="https://www.facebook.com/beinganimelover4/" target="_blank"
+                                            rel="noopener">Facebook</a></li>
+                                </ul>
+                            </div>
+                        </div>
+
+                        <!-- Socials -->
+                        <div class="footer-social">
+                            <h5>Follow Us</h5>
+                            <div class="social-links flex">
+                                <a href="https://www.youtube.com/@beinganimelover4" class="cta cta-circle"
+                                    target="_blank" rel="noopener" aria-label="YouTube"><ion-icon
+                                        name="logo-youtube"></ion-icon></a>
+                                <a href="https://www.instagram.com/beinganimelover" class="cta cta-circle"
+                                    target="_blank" rel="noopener" aria-label="Instagram"><ion-icon
+                                        name="logo-instagram"></ion-icon></a>
+                                <a href="https://www.facebook.com/beinganimelover4/" class="cta cta-circle"
+                                    target="_blank" rel="noopener" aria-label="Facebook"><ion-icon
+                                        name="logo-facebook"></ion-icon></a>
+                            </div>
+                        </div>
+
                     </div>
-                </div>
-                <div class="footer-bottom flex">
-                    <p>© 2026 Beinganimelover. All rights reserved.</p>
+
+                    <!-- Divider -->
+                    <div class="footer-divider"></div>
+
+                    <!-- Giant Text -->
+                    <div class="footer-giant-text gsap-fade-up">
+                        <span>BEINGANIMELOVER</span>
+                    </div>
+
+                    <!-- Bottom bar -->
+                    <div class="footer-bottom">
+                        <p>© 2026 Beinganimelover. All rights reserved.</p>
+                        <a href="#">Privacy Policy</a>
+                    </div>
+
                 </div>
             </footer>
 
         </div>
     </div>
 
+    <!-- Back to Top -->
+    <button class="back-to-top" id="backToTop" aria-label="Back to top">
+        <ion-icon name="arrow-up-outline"></ion-icon>
+    </button>
 
     <!-- Ionicons (deferred) -->
     <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
