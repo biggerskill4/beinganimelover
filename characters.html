@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Characters - Beinganimelover</title>
+
+    <link rel="shortcut icon" href="./assets/images/favicon.webp" type="image/x-icon">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@12/swiper-bundle.min.css">
+    <link rel="stylesheet" href="./assets/css/style.css">
+    <link rel="stylesheet" href="./assets/css/main.css">
+    <link rel="stylesheet" href="./assets/css/characters.css">
+</head>
+
+<body class="page-ready">
+
+    <!-- Custom cursor -->
+    <div class="custom-cursor"></div>
+    <div class="custom-cursor-circle"></div>
+
+    <div class="smooth-wrapper">
+        <div class="smooth-content">
+
+            <!-- Mobile Nav -->
+            <div class="mobile-nav" id="mobileNav">
+                <button class="mobile-nav-close" id="mobileNavClose" aria-label="Close menu">
+                    <ion-icon name="close-outline"></ion-icon>
+                </button>
+                <ul>
+                    <li><a href="./index.html">Home<span>01</span></a></li>
+                    <li><a href="./characters.html" class="active">Anime<span>02</span></a></li>
+                    <li><a href="./characters.html">Categories<span>03</span></a></li>
+                    <li><a href="#">Videos<span>04</span></a></li>
+                    <li><a href="#">About<span>05</span></a></li>
+                </ul>
+                <div class="mobile-nav-footer">
+                    <a href="https://www.youtube.com/@beinganimelover4" class="cta cta-circle" target="_blank"
+                        rel="noopener" aria-label="YouTube"><ion-icon name="logo-youtube"></ion-icon></a>
+                    <a href="https://www.instagram.com/beinganimelover" class="cta cta-circle" target="_blank"
+                        rel="noopener" aria-label="Instagram"><ion-icon name="logo-instagram"></ion-icon></a>
+                    <a href="https://www.facebook.com/beinganimelover4/" class="cta cta-circle" target="_blank"
+                        rel="noopener" aria-label="Facebook"><ion-icon name="logo-facebook"></ion-icon></a>
+                </div>
+            </div>
+
+            <!-- Header -->
+            <header class="flex">
+                <div class="container flex">
+                    <div class="site-logo flex">
+                        <a href="./index.html">
+                            <img src="./assets/images/logo.svg" alt="Beinganimelover Logo">
+                        </a>
+                    </div>
+                    <nav class="menu flex" aria-label="Main navigation">
+                        <ul class="flex">
+                            <li><a href="./index.html" class="flex-col" data-text="Home"><span
+                                        class="menu-text">Home</span></a></li>
+                            <li><a href="./characters.html" class="flex-col active" data-text="Anime"><span
+                                        class="menu-text">Anime</span></a></li>
+                            <li><a href="./characters.html" class="flex-col" data-text="Categories"><span
+                                        class="menu-text">Categories</span></a></li>
+                            <li><a href="#" class="flex-col" data-text="Videos"><span
+                                        class="menu-text">Videos</span></a></li>
+                            <li><a href="#" class="flex-col" data-text="About"><span class="menu-text">About</span></a>
+                            </li>
+                        </ul>
+                    </nav>
+                    <div class="header-btn flex">
+                        <a href="https://www.youtube.com/@beinganimelover4" class="cta flex" target="_blank"
+                            rel="noopener">
+                            <span class="cta-text flex">Subscribe</span>
+                            <span class="flex"><ion-icon name="logo-youtube"></ion-icon></span>
+                        </a>
+                        <button class="hamburger" id="hamburger" aria-label="Toggle menu">
+                            <span></span><span></span><span></span>
+                        </button>
+                    </div>
+                </div>
+            </header>
+
+            <!-- Page Hero -->
+            <section class="archive-hero flex">
+                <div class="container flex-col">
+                    <div class="archive-hero-tag">&#x2665; All Characters</div>
+                    <h1 class="archive-hero-title">Meet The <em>Legends</em></h1>
+                    <p class="archive-hero-sub">Explore every character across all anime series</p>
+                </div>
+            </section>
+
+            <!-- Filters + Search -->
+            <section class="archive-filters flex">
+                <div class="container flex-col">
+                    <div class="filters-glass">
+
+                        <!-- Search + count -->
+                        <div class="filters-top-row">
+                            <div class="archive-search-wrap">
+                                <ion-icon name="search-outline"></ion-icon>
+                                <input type="text" id="archiveSearch" placeholder="Search characters..."
+                                    autocomplete="off">
+                                <button class="search-clear" id="searchClear" style="display:none;">
+                                    <ion-icon name="close-outline"></ion-icon>
+                                </button>
+                            </div>
+                            <div class="archive-count">Showing <span id="charCount">0</span> characters</div>
+                        </div>
+
+                        <div class="filters-divider"></div>
+
+                        <!-- Filters row -->
+                        <div class="filters-bottom-row">
+                            <div class="filter-group">
+                                <span class="filter-label">Series</span>
+                                <select class="filter-select" id="seriesSelect">
+                                    <option value="all">All Series</option>
+                                </select>
+                            </div>
+                            <div class="filters-separator"></div>
+                            <div class="filter-group">
+                                <span class="filter-label">Type</span>
+                                <div class="filter-pills" id="typeFilters">
+                                    <button class="filter-pill active" data-filter="type" data-value="all">All</button>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </section>
+
+            <!-- Characters Grid -->
+            <section class="archive-grid-section flex">
+                <div class="container flex-col">
+                    <div class="archive-grid" id="archiveGrid"></div>
+                    <div class="archive-empty" id="archiveEmpty" style="display:none;">
+                        <ion-icon name="search-outline"></ion-icon>
+                        <p>No characters found</p>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Footer -->
+            <footer class="site-footer flex-col">
+                <div class="container flex">
+                    <div class="footer-top">
+                        <div class="footer-brand">
+                            <img src="./assets/images/logo.svg" alt="Beinganimelover Logo">
+                            <p>Your hub for anime edits, shorts, and character exploration. Dive into the worlds of your
+                                favorite anime with cinematic visuals and curated content.</p>
+                        </div>
+                        <div class="footer-nav">
+                            <div class="footer-nav-col">
+                                <h5>Explore</h5>
+                                <ul>
+                                    <li><a href="./index.html">Home</a></li>
+                                    <li><a href="./characters.html">Characters</a></li>
+                                    <li><a href="#">Videos</a></li>
+                                    <li><a href="#">About</a></li>
+                                </ul>
+                            </div>
+                            <div class="footer-nav-col">
+                                <h5>Connect</h5>
+                                <ul>
+                                    <li><a href="https://www.youtube.com/@beinganimelover4" target="_blank"
+                                            rel="noopener">YouTube</a></li>
+                                    <li><a href="https://www.instagram.com/beinganimelover" target="_blank"
+                                            rel="noopener">Instagram</a></li>
+                                    <li><a href="https://www.facebook.com/beinganimelover4/" target="_blank"
+                                            rel="noopener">Facebook</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="footer-social">
+                            <h5>Follow Us</h5>
+                            <div class="social-links flex">
+                                <a href="https://www.youtube.com/@beinganimelover4" class="cta cta-circle"
+                                    target="_blank" rel="noopener" aria-label="YouTube"><ion-icon
+                                        name="logo-youtube"></ion-icon></a>
+                                <a href="https://www.instagram.com/beinganimelover" class="cta cta-circle"
+                                    target="_blank" rel="noopener" aria-label="Instagram"><ion-icon
+                                        name="logo-instagram"></ion-icon></a>
+                                <a href="https://www.facebook.com/beinganimelover4/" class="cta cta-circle"
+                                    target="_blank" rel="noopener" aria-label="Facebook"><ion-icon
+                                        name="logo-facebook"></ion-icon></a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="footer-divider"></div>
+                    <div class="footer-giant-text">
+                        <span>BEINGANIMELOVER</span>
+                    </div>
+                    <div class="footer-bottom">
+                        <p>© 2026 Beinganimelover. All rights reserved.</p>
+                        <a href="#">Privacy Policy</a>
+                    </div>
+                </div>
+            </footer>
+
+        </div>
+    </div>
+
+    <!-- Back to Top -->
+    <button class="back-to-top" id="backToTop" aria-label="Back to top">
+        <ion-icon name="arrow-up-outline"></ion-icon>
+    </button>
+
+    <!-- Ionicons -->
+    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+
+    <!-- GSAP -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.13.0/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.13.0/ScrollTrigger.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.13.0/ScrollSmoother.min.js"></script>
+
+    <!-- Swiper -->
+    <script src="https://cdn.jsdelivr.net/npm/swiper@12/swiper-bundle.min.js"></script>
+
+    <!-- Data -->
+    <script src="./assets/js/characters.js"></script>
+
+    <!-- Page Scripts -->
+    <script src="./assets/js/characters-archive.js"></script>
+    <script src="./assets/js/animation.js"></script>
+
+</body>
+
+</html>
