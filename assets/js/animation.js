@@ -115,9 +115,9 @@ gsap.to(".parallax-img", {
   ease: "none",
   scrollTrigger: {
     trigger: ".parallax-section",
-    start: "top top",
+    start: "top bottom",
     end: "bottom top",
-    scrub: true
+    scrub: true,
   }
 });
 // =========================
@@ -143,6 +143,8 @@ gsap.utils.toArray(".gsap-fade-up").forEach((el) => {
 // =========================
 // End Gsap Fade
 // =========================
+
+
 
 // =========================
 // Header Menu
@@ -294,6 +296,21 @@ gsap.to(".hero .myHeroSwiper", {
 // End Hero
 // =========================
 
+// =========================
+// Video Thumbnail Click Play
+// =========================
+document.querySelectorAll(".video-card, .video-card-featured, .video-card-sm").forEach(card => {
+    card.addEventListener("click", () => {
+        const id = card.dataset.id;
+        const iframe = card.querySelector("iframe");
+        iframe.src = `https://www.youtube.com/embed/${id}?autoplay=1`;
+        card.classList.add("playing");
+    });
+});
+// =========================
+// End Video Click Play
+// =========================
+
 
 // =========================
 // Character Spotlight
@@ -324,7 +341,7 @@ const csSwiper = new Swiper(".csSwiper", {
   },
   scrollbar: {
     el: ".swiper-scrollbar",
-    draggable: true
+    draggable: true,
   },
 });
 
@@ -338,7 +355,7 @@ gsap.from(".cs-card", {
   scrollTrigger: {
     trigger: ".character-spotlight",
     start: "top 75%",
-    toggleActions: "play none none none"
+    toggleActions: "play none none reverse"
   }
 });
 
@@ -424,6 +441,24 @@ ScrollTrigger.matchMedia({
 });
 
 // =========================
+// Footer Giant Text
+// =========================
+gsap.from(".footer-giant-text span", {
+    y: 80,
+    opacity: 0,
+    duration: 1,
+    ease: "power3.out",
+    scrollTrigger: {
+        trigger: ".footer-giant-text",
+        start: "top 90%",
+        toggleActions: "play none none none"
+    }
+});
+// =========================
+// End Footer
+// =========================
+
+// =========================
 // Mobile Menu
 // =========================
 const hamburger  = document.getElementById("hamburger");
@@ -459,7 +494,38 @@ const observer = new MutationObserver(() => {
   }
 });
 observer.observe(mobileNav, { attributes: true, attributeFilter: ["class"] });
+
+const mobileNavClose = document.getElementById("mobileNavClose");
+
+if (mobileNavClose) {
+    mobileNavClose.addEventListener("click", () => {
+        const mobileNav = document.getElementById("mobileNav");
+        const hamburger = document.querySelector(".hamburger");
+        mobileNav.classList.remove("open");
+        hamburger.classList.remove("open");
+        document.body.style.overflow = "";
+    });
+}
 // =========================
 // End Mobile Menu
 // =========================
 
+// =========================
+// Back to Top
+// =========================
+const backToTop = document.getElementById("backToTop");
+
+window.addEventListener("scroll", () => {
+    if (window.scrollY > 400) {
+        backToTop.classList.add("visible");
+    } else {
+        backToTop.classList.remove("visible");
+    }
+});
+
+backToTop.addEventListener("click", () => {
+    window.scrollTo({ top: 0, behavior: "smooth" });
+});
+// =========================
+// End Back to Top
+// =========================
