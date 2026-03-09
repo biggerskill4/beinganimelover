@@ -64,6 +64,7 @@
     position: sticky;
     top: 10px;
     z-index: 90;
+    will-change: transform;
 }
 
 .archive-filters .container {

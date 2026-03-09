@@ -153,6 +153,17 @@ gsap.from(".archive-hero-tag, .archive-hero-title, .archive-hero-sub", {
     ease: "power3.out"
 });
 
+// Pin filters on desktop
+if (window.innerWidth >= 768) {
+    ScrollTrigger.create({
+        trigger: ".archive-filters",
+        start: "top top",
+        end: "max",
+        pin: true,
+        pinSpacing: false,
+    });
+}
+
 // =========================
 // End Characters Archive
 // =========================

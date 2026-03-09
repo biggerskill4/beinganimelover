@@ -149,38 +149,49 @@ document.querySelectorAll(".video-card, .video-card-featured, .video-card-sm").f
 // =========================
 
 
-// =========================
-// Character Spotlight
-// =========================
+// ================================
+// Character Spotlight — Dynamic
+// ================================
+const csWrapper = document.getElementById("cs-swiper-wrapper");
 
-// Spotlight cursor glow effect
-document.querySelectorAll(".cs-card").forEach(card => {
-  card.addEventListener("mousemove", (e) => {
-    const rect = card.getBoundingClientRect();
-    const x = ((e.clientX - rect.left) / rect.width) * 100;
-    const y = ((e.clientY - rect.top) / rect.height) * 100;
-    card.style.setProperty("--mx", x + "%");
-    card.style.setProperty("--my", y + "%");
-  });
-});
+if (csWrapper && typeof characters !== "undefined") {
+    characters.forEach((char, index) => {
+        const num = String(index + 1).padStart(2, "0");
+        const slide = document.createElement("div");
+        slide.className = "swiper-slide cs-card";
+        slide.innerHTML = `
+            <a href="./character.html?id=${char.id}" class="cs-card-link">
+                <div class="char-img">
+                    <img src="${char.image}" alt="${char.name}" loading="lazy">
+                </div>
+                <span class="cs-card-num">${num}</span>
+                <div class="cs-card-info">
+                    <h3>${char.name}</h3>
+                    <span>${char.anime}</span>
+                </div>
+            </a>
+        `;
+        csWrapper.appendChild(slide);
+    });
+}
 
-// Swiper — smooth free drag with momentum
+// Init csSwiper AFTER slides are rendered
 const csSwiper = new Swiper(".csSwiper", {
-  slidesPerView: "auto",
-  spaceBetween: 20,
-  grabCursor: true,
-  freeMode: {
-    enabled: true,
-    momentum: true,
-    momentumRatio: 0.8,
-    momentumVelocityRatio: 0.8,
-    momentumBounce: false,
-  },
-  scrollbar: {
-    el: ".swiper-scrollbar",
-    draggable: true,
-  },
+    slidesPerView: "auto",
+    spaceBetween: 20,
+    grabCursor: true,
+    freeMode: {
+        enabled: true,
+        momentum: true,
+        momentumRatio: 0.8,
+        momentumBounce: false,
+    },
+    scrollbar: {
+        el: ".swiper-scrollbar",
+        draggable: true,
+    },
 });
+
 
 // GSAP entrance — cards slide in on scroll
 gsap.from(".cs-card", {

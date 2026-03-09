@@ -66,9 +66,13 @@ header .header-btn {
         display: none;
     }
 
-    header .site-logo,
+    header .site-logo {
+        width: 40%;
+    }
+    
     header .header-btn {
-        width: 50%;
+        width: 60%;
+        gap: 10px;
     }
 }
 
@@ -78,7 +82,7 @@ header .header-btn {
     }
 
     header .site-logo img {
-        width: 130px;
+        width: 100%;
     }
 }
 
@@ -634,7 +638,6 @@ header .header-btn {
     }
 
     .video-play-btn span {
-        background: rgba(248, 157, 162, 0.85);
         box-shadow: 0 0 20px rgba(248, 157, 162, 0.3);
     }
 
@@ -751,6 +754,21 @@ header .header-btn {
     border-radius: 50px;
 }
 
+.cs-card-link {
+    display: flex;
+    flex-direction: column;
+    text-decoration: none;
+    color: inherit;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    inset: 0;
+}
+
+.cs-card {
+    position: relative;
+}
+
 @media (max-width: 768px) {
     .character-spotlight {
         padding: 60px 0;
@@ -847,7 +865,7 @@ header .header-btn {
 }
 
 /* Dark overlay on hover */
-.cs-card::after {
+.cs-card-link::after {
     content: '';
     position: absolute;
     inset: 0;
@@ -858,7 +876,7 @@ header .header-btn {
     border-radius: 30px;
 }
 
-.cs-card:hover::after {
+.cs-card-link:hover::after {
     opacity: 1;
 }
 
@@ -966,6 +984,8 @@ header .header-btn {
 @media (max-width: 550px) {
     .character-spotlight .section-header h2 {
         font-size: 36px;
+        text-align: center;
+        width: 100%;
     }
 
     .character-spotlight .section-header p {
@@ -1159,7 +1179,7 @@ header .header-btn {
 
 @media (max-width: 550px) {
     .about-section {
-        padding: 40px 15px;
+        padding: 30px 8px 40px;
     }
 
     .about-card {
@@ -1338,7 +1358,12 @@ header .header-btn {
 .featured-anime .container {
     width: var(--max-width);
 }
-
+.featured-anime .section-title {
+    text-align: center;
+}
+.featured-anime .section-subtitle {
+    text-align: center;
+}
 .anime-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
