@@ -1777,11 +1777,20 @@ header .header-btn {
     .footer-social {
         align-items: flex-start;
     }
+    .footer-divider {
+        display: none;
+    }
 
     .footer-bottom {
-        flex-direction: column;
-        align-items: flex-start;
+        flex-direction: column-reverse;
+        align-items: center;
         gap: 6px;
+    }
+    .footer-giant-text {
+        display: none;
+    }
+    .site-footer .container {
+        gap: 10px;
     }
 }
 
