@@ -85,7 +85,7 @@
                     <ion-icon name="close-outline"></ion-icon>
                 </button>
                 <ul>
-                    <li><a href="/index.html">Home<span>01</span></a></li>
+                    <li><a href="/index.html" class="active">Home<span>01</span></a></li>
                     <li><a href="./characters.html">Anime<span>02</span></a></li>
                     <li><a href="./characters.html">Categories<span>03</span></a></li>
                     <li><a href="#">Videos<span>04</span></a></li>
@@ -111,7 +111,7 @@
                     </div>
                     <nav class="menu flex" aria-label="Main navigation">
                         <ul class="flex">
-                            <li><a href="./index.html" class="flex-col" data-text="Home"><span
+                            <li><a href="./index.html" class="flex-col active" data-text="Home"><span
                                         class="menu-text">Home</span></a></li>
                             <li><a href="./characters.html" class="flex-col" data-text="Anime"><span
                                         class="menu-text">Anime</span></a></li>
@@ -205,64 +205,14 @@
                 </div>
 
                 <div class="swiper csSwiper">
-                    <div class="swiper-wrapper">
-                        <div class="swiper-slide cs-card">
-                            <div class="char-img"><img src="./assets/images/anime-character/aot/eren_jeager.webp"
-                                    alt="Eren Jeager" loading="lazy"></div>
-                            <span class="cs-card-num">01</span>
-                            <div class="cs-card-info">
-                                <h3>Eren Jeager</h3><span>Attack on Titan</span>
-                            </div>
-                        </div>
-                        <div class="swiper-slide cs-card">
-                            <div class="char-img"><img src="./assets/images/anime-character/demon-slayer/tanjiro.webp"
-                                    alt="Tanjiro Kamado" loading="lazy"></div>
-                            <span class="cs-card-num">02</span>
-                            <div class="cs-card-info">
-                                <h3>Tanjiro Kamado</h3><span>Demon Slayer</span>
-                            </div>
-                        </div>
-                        <div class="swiper-slide cs-card">
-                            <div class="char-img"><img src="./assets/images/anime-character/nier-automata/2b.webp"
-                                    alt="2B" loading="lazy"></div>
-                            <span class="cs-card-num">03</span>
-                            <div class="cs-card-info">
-                                <h3>2B</h3><span>Nier Automata</span>
-                            </div>
-                        </div>
-                        <div class="swiper-slide cs-card">
-                            <div class="char-img"><img
-                                    src="./assets/images/anime-character/my-dressup-darling/marin_kitagawa.webp"
-                                    alt="Marin Kitagawa" loading="lazy"></div>
-                            <span class="cs-card-num">04</span>
-                            <div class="cs-card-info">
-                                <h3>Marin Kitagawa</h3><span>My Dress-Up Darling</span>
-                            </div>
-                        </div>
-                        <div class="swiper-slide cs-card">
-                            <div class="char-img"><img src="./assets/images/anime-character/aot/levi_ackerman.webp"
-                                    alt="Levi Ackerman" loading="lazy"></div>
-                            <span class="cs-card-num">05</span>
-                            <div class="cs-card-info">
-                                <h3>Levi Ackerman</h3><span>Attack on Titan</span>
-                            </div>
-                        </div>
-                        <div class="swiper-slide cs-card">
-                            <div class="char-img"><img src="./assets/images/anime-character/demon-slayer/nezuko.webp"
-                                    alt="Nezuko" loading="lazy"></div>
-                            <span class="cs-card-num">06</span>
-                            <div class="cs-card-info">
-                                <h3>Nezuko</h3><span>Demon Slayer</span>
-                            </div>
-                        </div>
+                    <div class="swiper-wrapper" id="cs-swiper-wrapper">
+                        <!-- dynamically rendered -->
                     </div>
-
-                    <!-- swiper scrollbar -->
                     <div class="swiper-scrollbar"></div>
                 </div>
 
                 <div class="cs-footer">
-                    <a href="#" class="cta">View All Characters</a>
+                    <a href="./characters.html" class="cta">View All Characters</a>
                 </div>
             </section>
 
@@ -566,7 +516,7 @@
     <script src="./assets/js/script.js"></script>
     <script src="./assets/js/characters.js"></script>
     <script src="./assets/js/animation.js"></script>
-    <script src="./assets/js/hero-animation.js"></script>
+    <script src="./assets/js/home.js"></script>
 
 </body>
 

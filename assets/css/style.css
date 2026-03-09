@@ -254,7 +254,7 @@ a {
     width: 42px;
     height: 42px;
     border-radius: 50%;
-    border: 1px solid rgba(255,255,255,0.15);
+    border: 1px solid rgba(255, 255, 255, 0.15);
     background: transparent;
     color: var(--white-color);
     font-size: 24px;
@@ -281,8 +281,8 @@ a {
 @media(max-width:550px) {
     .cta {
         font-size: 13px;
-        padding: 10px 18px;
-        gap: 6px;
+        padding: 10px 15px;
+        gap: 8px !important;
     }
 
     h2 {
@@ -402,7 +402,7 @@ section {
     height: 46px;
     border-radius: 50%;
     background: var(--secondary-color);
-    border: 1px solid rgba(255,255,255,0.1);
+    border: 1px solid rgba(255, 255, 255, 0.1);
     color: var(--white-color);
     display: flex;
     align-items: center;
@@ -413,7 +413,7 @@ section {
     visibility: hidden;
     transform: translateY(16px);
     transition: opacity 0.3s ease, transform 0.3s ease, visibility 0.3s ease, background 0.3s ease;
-    box-shadow: 0 4px 20px rgba(0,0,0,0.4);
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.4);
 }
 
 .back-to-top.visible {
@@ -429,8 +429,15 @@ section {
 }
 
 @media (max-width: 550px) {
-    .back-to-top { bottom: 20px; right: 20px; width: 40px; height: 40px; font-size: 18px; }
+    .back-to-top {
+        bottom: 20px;
+        right: 20px;
+        width: 40px;
+        height: 40px;
+        font-size: 18px;
+    }
 }
+
 /* ====================
   End Back to Top
 ==================== */

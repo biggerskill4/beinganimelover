@@ -17,7 +17,13 @@ const characters = [
             "./assets/images/anime-character/aot/eren_jeager.webp",
         ],
         related: ["levi-ackerman", "mikasa-ackerman", "armin-arlert"],
-        videos: []
+        videos: [
+            {
+                id: "c9nPu6pLfNk",
+                title: "Eren Yeager Edit",
+                type: "short"
+            }
+        ]
     },
 
     {
