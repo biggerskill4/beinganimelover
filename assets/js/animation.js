@@ -137,7 +137,7 @@ const navLinks = document.querySelectorAll("header .menu ul li a");
 
 navLinks.forEach(link => {
 
-  const navLinksText = link.querySelector("header .menu ul li a span.menu-text");
+  const navLinksText = link.querySelector("span.menu-text");
   const data = link.getAttribute("data-text");
   navLinksText.innerHTML = `<span>${data}</span><span>${data}</span>`;
 });

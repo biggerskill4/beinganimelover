@@ -67,6 +67,14 @@
     will-change: transform;
 }
 
+/* Desktop — ScrollTrigger pin handles sticky */
+@media (min-width: 768px) {
+    .archive-filters {
+        position: relative;
+        top: auto;
+    }
+}
+
 .archive-filters .container {
     width: var(--max-width);
     gap: 0;
