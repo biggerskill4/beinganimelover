@@ -21,7 +21,7 @@ const heroSlider = document.getElementById("hero-slider");
 
 // Find the anime object
 const animeToShow = animeHeroList.find(a => a.animeName === triggerAnime);
-// const animeToShow = animeHeroList.find(a => a.animeName === "Demon Slayer");
+// const animeToShow = animeHeroList.find(a => a.animeName === "My Dress-up Darling");
 
 // Create slides for each character
 animeToShow.characters.forEach(char => {

@@ -89,13 +89,13 @@ const animeHeroList = [
         ]
       },
       {
-        characterName: "Inosuke Hashibira",
-        characterImage: "./assets/images/anime-character/demon-slayer/inosuke.webp",
+        characterName: "Muzan Kibutsuji",
+        characterImage: "./assets/images/anime-character/demon-slayer/muzan.webp",
         bgImage: "./assets/images/hero/demon_slayer_bg.jpg",
         cards: [
-          { title: "Beast Breathing", description: "Wild sword techniques." },
-          { title: "Boar Mask", description: "Raised in the mountains." },
-          { title: "Fearless Fighter", description: "Always ready to battle." }
+          { title: "Demon King", description: "The first and most powerful demon." },
+          { title: "Shape Shifting", description: "Can change appearance at will." },
+          { title: "Immense Power", description: "Possesses terrifying strength and regeneration." }
         ]
       },
       {
@@ -116,7 +116,7 @@ const animeHeroList = [
     characters: [
       {
         characterName: "Izuku Midoriya",
-        characterImage: "./assets/images/anime-character/mha/deku.png",
+        characterImage: "./assets/images/anime-character/mha/deku.webp",
         bgImage: "./assets/images/hero/mha_bg.jpg",
         cards: [
           { title: "One For All", description: "Powerful inherited quirk." },
@@ -126,7 +126,7 @@ const animeHeroList = [
       },
       {
         characterName: "Katsuki Bakugo",
-        characterImage: "./assets/images/anime-character/mha/bakugo.png",
+        characterImage: "./assets/images/anime-character/mha/bakugo.webp",
         bgImage: "./assets/images/hero/mha_bg.jpg",
         cards: [
           { title: "Explosion", description: "Creates explosions from sweat." },
@@ -136,7 +136,7 @@ const animeHeroList = [
       },
       {
         characterName: "Shoto Todoroki",
-        characterImage: "./assets/images/anime-character/mha/todoroki.png",
+        characterImage: "./assets/images/anime-character/mha/todoroki.webp",
         bgImage: "./assets/images/hero/mha_bg.jpg",
         cards: [
           { title: "Half Cold Half Hot", description: "Ice and fire powers." },
@@ -146,7 +146,7 @@ const animeHeroList = [
       },
       {
         characterName: "Ochaco Uraraka",
-        characterImage: "./assets/images/anime-character/mha/uraraka.png",
+        characterImage: "./assets/images/anime-character/mha/uraraka.webp",
         bgImage: "./assets/images/hero/mha_bg.jpg",
         cards: [
           { title: "Zero Gravity", description: "Removes gravity." },
@@ -156,7 +156,7 @@ const animeHeroList = [
       },
       {
         characterName: "All Might",
-        characterImage: "./assets/images/anime-character/mha/allmight.png",
+        characterImage: "./assets/images/anime-character/mha/allmight.webp",
         bgImage: "./assets/images/hero/mha_bg.jpg",
         cards: [
           { title: "Symbol of Peace", description: "Greatest hero." },
@@ -211,13 +211,13 @@ const animeHeroList = [
         ]
       },
       {
-        characterName: "Sukuna",
-        characterImage: "./assets/images/anime-character/jjk/sukuna.webp",
+        characterName: "Yuta Okkotsu",
+        characterImage: "./assets/images/anime-character/jjk/yuta.webp",
         bgImage: "./assets/images/hero/jjk_bg.jpg",
         cards: [
-          { title: "King of Curses", description: "Ancient curse." },
-          { title: "Terrifying Power", description: "Extremely dangerous." },
-          { title: "Dominant", description: "Rules over curses." }
+          { title: "Special Grade Sorcerer", description: "One of the strongest jujutsu sorcerers." },
+          { title: "Rika's Power", description: "Bound with the powerful cursed spirit Rika." },
+          { title: "Immense Cursed Energy", description: "Possesses extraordinary cursed energy." }
         ]
       }
     ]
