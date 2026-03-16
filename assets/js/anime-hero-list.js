@@ -267,13 +267,13 @@ const animeHeroList = [
         ]
       },
       {
-        characterName: "JuJu",
-        characterImage: "./assets/images/anime-character/my-dressup-darling/juju.webp",
+        characterName: "Shizuku Kuroe",
+        characterImage: "./assets/images/anime-character/my-dressup-darling/shizuku.webp",
         bgImage: "./assets/images/hero/my_dressup_darling_bg.webp",
         cards: [
-          { title: "Popular Cosplayer", description: "Famous online." },
-          { title: "Cute Style", description: "Specializes in cute characters." },
-          { title: "Confident", description: "Knows her craft." }
+          { title: "Mysterious Character", description: "Dark and elegant personality." },
+          { title: "Game Heroine", description: "Character from a visual novel." },
+          { title: "Elegant Style", description: "Known for gothic beauty." }
         ]
       }
     ]
